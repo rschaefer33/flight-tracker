@@ -38,5 +38,20 @@ SerpApi round-trip search is two-phase; right now `confirm()` validates the
 link for the return. A later pass can add the second SerpApi call (via
 `departure_token`) to verify return arrival time end-to-end.
 
-## Next step
-Notifications (free phone push or email) + an auto-schedule to run every few hours.
+## Live deployment
+- **Runs in the cloud** via GitHub Actions (`.github/workflows/track.yml`), every
+  3 hours, no laptop needed. Manual run: Actions tab → "flight-tracker" → Run, or
+  `gh workflow run track.yml`.
+- **Price history** is committed back to the repo each run (`history.json`).
+- **Phone alerts** via ntfy.sh. Secrets live in GitHub (Settings → Secrets):
+  `TRAVELPAYOUTS_TOKEN`, `SERPAPI_KEY`, `NTFY_TOPIC`.
+
+### Get the alerts on your phone
+Install the **ntfy** app (iOS/Android) → add subscription → server `ntfy.sh`,
+topic = the value of `NTFY_TOPIC` (kept locally in `.ntfy_topic.txt`, not in git).
+
+## Changing settings later
+Edit `CONFIG` in `tracker.py`, commit, push — the next run uses it.
+- `target_price`: set a number to also alert under $X (currently new-lows only).
+- times / stops / weeks_ahead: all in `CONFIG`.
+- sweep frequency: the `cron` line in `.github/workflows/track.yml`.
