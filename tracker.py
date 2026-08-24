@@ -1,18 +1,19 @@
 #!/usr/bin/env python3
 """
-SFO <-> NYC weekend flight-price tracker  (free hybrid)
+Weekend flight tracker  —  SF <-> NYC, both directions.
 
-  RADAR      Travelpayouts v3 (free, no card, high volume) sweeps every weekend
-             and watches the cheapest cached fare for movement. It already knows
-             departure time + stop count, so it pre-filters to Fri-night / <=1 stop.
+  RADAR      Travelpayouts v3 (free, high volume): coarse cheapest-fare tripwire
+             per weekend/direction. Cheap signal for "something moved."
+  CONFIRMER  SerpApi Google Flights, two-phase (free ~100/mo): on a radar low it
+             pulls the REAL schedule-matching round trip — actual times, airlines,
+             layover airports + durations, total price, and a Google Flights link.
+  ALERT      ntfy.sh push on a confirmed new low.
 
-  CONFIRMER  SerpApi Google Flights (free 100/mo) is spent ONLY when the radar
-             flags a new low: it verifies a schedule-matching itinerary really
-             exists (arrival windows too) and returns the real price + booking link.
+Two trips are tracked:
+  forward  SF -> NY : out SFO->NYC Fri 8pm+, back NYC->SFO Sun night
+  reverse  NY -> SF : out NYC->SFO Fri 8pm+, back SFO->NYC Sun night
 
-  ALERT      Fires only on a SerpApi-confirmed, time-valid NEW LOW.
-
-Trip rules live in CONFIG. Prices in USD.
+All prices USD. Settings live in CONFIG.
 """
 
 import os
@@ -24,26 +25,25 @@ import urllib.error
 from datetime import datetime, timedelta, date
 
 # --------------------------------------------------------------------------- #
-# CONFIG
-# --------------------------------------------------------------------------- #
+NY = ["JFK", "LGA", "EWR"]
+
 CONFIG = {
-    "origin": "SFO",
-    "ny_airports": ["JFK", "LGA", "EWR"],
     "weeks_ahead": 52,
     "currency": "usd",
     "max_stops": 1,
-
-    # Outbound (Friday)
-    "out_depart_after": "20:00",   # leave SFO at/after 8 PM Fri
-    "out_arrive_by_sat": "10:00",  # a 1-stop must land NYC by this Sat morning
-
-    # Return (Sunday) -- land SF at night, late is fine
-    "ret_arrive_after": "15:00",   # land SFO at/after 3 PM Sun
+    "out_depart_after": "20:00",   # leave Fri at/after 8 PM
+    "out_arrive_by_next": "10:00",  # a 1-stop must land by early Sat AM
+    "ret_depart_after": "12:00",   # don't leave before noon Sun (no early flights)
+    "ret_arrive_after": "15:00",   # land home at/after 3 PM Sun
     "ret_arrive_by_mon": "02:00",  # ...no later than ~1-2 AM Mon
+    "target_price": None,          # set a number to also alert under $X
+    "max_confirm_events_per_run": 5,   # each event = 2 SerpApi calls (budget guard)
+}
 
-    # Alerting
-    "target_price": None,          # e.g. 350 -> also alert under this. None = new-lows only
-    "max_confirms_per_run": 6,     # cap SerpApi calls/run to protect the free 100/mo budget
+# trip -> which airports are the origin/destination of the OUTBOUND leg
+TRIPS = {
+    "forward": {"label": "SF → New York", "out": (["SFO"], NY)},
+    "reverse": {"label": "New York → SF", "out": (NY, ["SFO"])},
 }
 
 TP_TOKEN = os.environ.get("TRAVELPAYOUTS_TOKEN", "")
@@ -62,190 +62,50 @@ def _hhmm(s):
     return int(h) * 60 + int(m)
 
 
-def _minutes(dt):
+def _mins(dt):
     return dt.hour * 60 + dt.minute
 
 
 def parse_dt(s):
-    """Accepts ISO with or without tz offset; returns naive local wall-clock."""
-    s = s.strip().replace(" ", "T", 1) if " " in s and "T" not in s else s
+    s = s.strip()
+    if " " in s and "T" not in s:
+        s = s.replace(" ", "T", 1)
     try:
-        dt = datetime.fromisoformat(s)
+        return datetime.fromisoformat(s).replace(tzinfo=None)
     except ValueError:
-        # e.g. "2026-08-28 21:35" from SerpApi
-        dt = datetime.strptime(s[:16], "%Y-%m-%d %H:%M")
-    return dt.replace(tzinfo=None)
+        return datetime.strptime(s[:16], "%Y-%m-%dT%H:%M").replace(tzinfo=None)
 
 
 def upcoming_weekends(n):
     today = date.today()
-    days_until_fri = (4 - today.weekday()) % 7
-    first_fri = today + timedelta(days=days_until_fri or 7)
+    days = (4 - today.weekday()) % 7
+    first = today + timedelta(days=days or 7)
     for i in range(n):
-        fri = first_fri + timedelta(weeks=i)
+        fri = first + timedelta(weeks=i)
         yield fri, fri + timedelta(days=2)
 
 
-def google_flights_link(fri, sun):
-    q = f"flights from {CONFIG['origin']} to New York on {fri.isoformat()} returning {sun.isoformat()}"
+def gflink(dep_ids, arr_ids, fri, sun):
+    origin = "SFO" if dep_ids == ["SFO"] else "New York"
+    dest = "SFO" if arr_ids == ["SFO"] else "New York"
+    q = f"flights from {origin} to {dest} on {fri.isoformat()} returning {sun.isoformat()}"
     return "https://www.google.com/travel/flights?q=" + urllib.parse.quote(q)
 
 
-def _get_json(url, headers=None, timeout=45):
+def _get_json(url, headers=None, timeout=60):
     req = urllib.request.Request(url, headers=headers or {})
     try:
         with urllib.request.urlopen(req, timeout=timeout) as r:
             return json.load(r), None
     except urllib.error.HTTPError as e:
-        return None, f"{e.code} {e.read().decode(errors='ignore')[:200]}"
+        return None, f"{e.code} {e.read().decode(errors='ignore')[:160]}"
     except urllib.error.URLError as e:
         return None, str(e)
 
 
-# --------------------------------------------------------------------------- #
-# RADAR -- Travelpayouts v3 prices_for_dates (free, high volume)
-# --------------------------------------------------------------------------- #
-def _tp_cheapest(origin, destination, day):
-    """Cheapest cached one-way for origin->destination on `day`.
-    US round-trip cache is empty, so we price two one-ways. Coarse by design:
-    no time filter here (per-date cache is thin) -- SerpApi does the real
-    time-matching at confirm time. Returns dict or None."""
-    params = {
-        "origin": origin, "destination": destination,
-        "departure_at": day.isoformat(),
-        "currency": CONFIG["currency"], "one_way": "true",
-        "sorting": "price", "limit": 30, "market": "us", "token": TP_TOKEN,
-    }
-    url = "https://api.travelpayouts.com/aviasales/v3/prices_for_dates?" + urllib.parse.urlencode(params)
-    data, err = _get_json(url)
-    if err:
-        print(f"    ! radar error {origin}->{destination} {day}: {err}")
-        return None
-    rows = (data or {}).get("data", [])
-    if not rows:
-        return None
-    # prefer <=1 stop; fall back to overall cheapest if none qualify
-    pref = [r for r in rows if r.get("transfers", 9) <= CONFIG["max_stops"]] or rows
-    best = min(pref, key=lambda r: float(r["price"]))
-    return {"price": float(best["price"]),
-            "dest": best.get("destination_airport") or best.get("destination"),
-            "transfers": best.get("transfers"), "airline": best.get("airline")}
-
-
-def radar(fri, sun):
-    """Coarse round-trip price tripwire = cheapest one-way out + cheapest one-way
-    back. Returns (price_usd, meta) or (None, None)."""
-    if not TP_TOKEN:
-        raise SystemExit("Missing TRAVELPAYOUTS_TOKEN (see README).")
-    out = _tp_cheapest(CONFIG["origin"], "NYC", fri)
-    ret = _tp_cheapest("NYC", CONFIG["origin"], sun)
-    if not out or not ret:
-        return None, None
-    return out["price"] + ret["price"], {
-        "out": out, "ret": ret,
-        "dest": out["dest"] if out["dest"] in CONFIG["ny_airports"] else "JFK",
-    }
-
-
-# --------------------------------------------------------------------------- #
-# CONFIRMER -- SerpApi Google Flights (free 100/mo; only on a hit)
-# --------------------------------------------------------------------------- #
-def _seg_list(flight):
-    return flight.get("flights", [])
-
-
-def _qualifies_out(flight, fri):
-    segs = _seg_list(flight)
-    if not segs or len(segs) - 1 > CONFIG["max_stops"]:
-        return False
-    dep = parse_dt(segs[0]["departure_airport"]["time"])
-    arr = parse_dt(segs[-1]["arrival_airport"]["time"])
-    if segs[0]["departure_airport"]["id"] != CONFIG["origin"]:
-        return False
-    if segs[-1]["arrival_airport"]["id"] not in CONFIG["ny_airports"]:
-        return False
-    if dep.date() != fri or _minutes(dep) < _hhmm(CONFIG["out_depart_after"]):
-        return False
-    if len(segs) - 1 == 1:  # 1 stop must land early Sat
-        sat = fri + timedelta(days=1)
-        if not (arr.date() == sat and _minutes(arr) <= _hhmm(CONFIG["out_arrive_by_sat"])):
-            return False
-    return True
-
-
-def _qualifies_ret(flight, sun):
-    segs = _seg_list(flight)
-    if not segs or len(segs) - 1 > CONFIG["max_stops"]:
-        return False
-    dep = parse_dt(segs[0]["departure_airport"]["time"])
-    arr = parse_dt(segs[-1]["arrival_airport"]["time"])
-    if segs[0]["departure_airport"]["id"] not in CONFIG["ny_airports"]:
-        return False
-    if segs[-1]["arrival_airport"]["id"] != CONFIG["origin"]:
-        return False
-    if dep.date() != sun:
-        return False
-    mon = sun + timedelta(days=1)
-    ok_sun = arr.date() == sun and _minutes(arr) >= _hhmm(CONFIG["ret_arrive_after"])
-    ok_mon = arr.date() == mon and _minutes(arr) <= _hhmm(CONFIG["ret_arrive_by_mon"])
-    return ok_sun or ok_mon
-
-
-def confirm(fri, sun, dest_airport):
-    """Verify a schedule-matching round trip exists on Google Flights.
-    Returns dict(price, nonstop, ...) or None. Costs 1 SerpApi search."""
-    if not SERPAPI_KEY:
-        print("    ! no SERPAPI_KEY set; skipping confirm")
-        return None
-    dest = dest_airport if dest_airport in CONFIG["ny_airports"] else "JFK"
-    params = {
-        "engine": "google_flights",
-        "departure_id": CONFIG["origin"],
-        "arrival_id": dest,
-        "outbound_date": fri.isoformat(),
-        "return_date": sun.isoformat(),
-        "currency": "USD",
-        "type": "1",           # round trip
-        "hl": "en", "gl": "us",
-        "api_key": SERPAPI_KEY,
-    }
-    url = "https://serpapi.com/search.json?" + urllib.parse.urlencode(params)
-    data, err = _get_json(url)
-    if err:
-        print(f"    ! confirm error {fri}: {err}")
-        return None
-    flights = (data.get("best_flights") or []) + (data.get("other_flights") or [])
-    best = None
-    for fl in flights:
-        # SerpApi returns each option as a full round trip when type=1
-        segs = _seg_list(fl)
-        if not segs:
-            continue
-        # split into outbound / return by the SFO<->NYC turn is nontrivial;
-        # SerpApi groups a round trip's outbound in this object and the return is
-        # chosen in a second step. We treat 'flights' here as the OUTBOUND leg and
-        # accept it if the outbound qualifies; return timing is verified via the
-        # booking link. (Google's round-trip API is two-phase.)
-        if not _qualifies_out(fl, fri):
-            continue
-        price = float(fl.get("price", 0) or 0)
-        if price <= 0:
-            continue
-        nonstop = len(segs) - 1 == 0
-        if best is None or (price, 0 if nonstop else 1) < (best["price"], 0 if best["nonstop"] else 1):
-            best = {"price": price, "nonstop": nonstop, "dest": dest,
-                    "airlines": sorted({s.get("airline", "?") for s in segs})}
-    return best
-
-
-# --------------------------------------------------------------------------- #
-# history + orchestration
-# --------------------------------------------------------------------------- #
 def notify(title, body):
-    """Phone push via ntfy.sh (free, no account). No-op if NTFY_TOPIC unset."""
     if not NTFY_TOPIC:
         return
-    # ntfy header values must be ASCII; keep title clean and put detail in body
     req = urllib.request.Request(
         f"https://ntfy.sh/{NTFY_TOPIC}", data=body.encode("utf-8"),
         headers={"Title": title.encode("ascii", "ignore").decode(),
@@ -256,11 +116,139 @@ def notify(title, body):
         print(f"    ! notify failed: {e}")
 
 
+# --------------------------------------------------------------------------- #
+# RADAR  (Travelpayouts, free)
+# --------------------------------------------------------------------------- #
+def _tp_cheapest(origin, destination, day):
+    params = {"origin": origin, "destination": destination,
+              "departure_at": day.isoformat(), "currency": CONFIG["currency"],
+              "one_way": "true", "sorting": "price", "limit": 30,
+              "market": "us", "token": TP_TOKEN}
+    url = "https://api.travelpayouts.com/aviasales/v3/prices_for_dates?" + urllib.parse.urlencode(params)
+    data, err = _get_json(url)
+    if err:
+        print(f"    ! radar {origin}->{destination} {day}: {err}")
+        return None
+    rows = (data or {}).get("data", [])
+    pref = [r for r in rows if r.get("transfers", 9) <= CONFIG["max_stops"]] or rows
+    return float(min(pref, key=lambda r: float(r["price"]))["price"]) if pref else None
+
+
+def radar(trip_key, fri, sun):
+    """Coarse round-trip tripwire = cheapest one-way out + cheapest one-way back."""
+    if not TP_TOKEN:
+        raise SystemExit("Missing TRAVELPAYOUTS_TOKEN (see README).")
+    if trip_key == "forward":
+        o = _tp_cheapest("SFO", "NYC", fri); r = _tp_cheapest("NYC", "SFO", sun)
+    else:
+        o = _tp_cheapest("NYC", "SFO", fri); r = _tp_cheapest("SFO", "NYC", sun)
+    return (o + r) if (o and r) else None
+
+
+# --------------------------------------------------------------------------- #
+# CONFIRMER  (SerpApi Google Flights, two-phase)
+# --------------------------------------------------------------------------- #
+def _serp(extra):
+    params = {"engine": "google_flights", "currency": "USD", "hl": "en",
+              "gl": "us", "api_key": SERPAPI_KEY, **extra}
+    url = "https://serpapi.com/search.json?" + urllib.parse.urlencode(params)
+    data, err = _get_json(url)
+    if err:
+        print(f"    ! serp: {err}")
+        return None
+    return data
+
+
+def _stops(opt):
+    return len(opt["flights"]) - 1
+
+
+def _qual_out(opt, day, dep_ids, arr_ids):
+    if _stops(opt) > CONFIG["max_stops"]:
+        return False
+    segs = opt["flights"]
+    dep = parse_dt(segs[0]["departure_airport"]["time"])
+    arr = parse_dt(segs[-1]["arrival_airport"]["time"])
+    if segs[0]["departure_airport"]["id"] not in dep_ids:
+        return False
+    if segs[-1]["arrival_airport"]["id"] not in arr_ids:
+        return False
+    if dep.date() != day or _mins(dep) < _hhmm(CONFIG["out_depart_after"]):
+        return False
+    if _stops(opt) == 1:
+        nxt = day + timedelta(days=1)
+        if not (arr.date() == nxt and _mins(arr) <= _hhmm(CONFIG["out_arrive_by_next"])):
+            return False
+    return True
+
+
+def _qual_ret(opt, day, dep_ids, arr_ids):
+    if _stops(opt) > CONFIG["max_stops"]:
+        return False
+    segs = opt["flights"]
+    dep = parse_dt(segs[0]["departure_airport"]["time"])
+    arr = parse_dt(segs[-1]["arrival_airport"]["time"])
+    if segs[0]["departure_airport"]["id"] not in dep_ids:
+        return False
+    if segs[-1]["arrival_airport"]["id"] not in arr_ids:
+        return False
+    if dep.date() != day or _mins(dep) < _hhmm(CONFIG["ret_depart_after"]):
+        return False
+    mon = day + timedelta(days=1)
+    return ((arr.date() == day and _mins(arr) >= _hhmm(CONFIG["ret_arrive_after"]))
+            or (arr.date() == mon and _mins(arr) <= _hhmm(CONFIG["ret_arrive_by_mon"])))
+
+
+def _leg(opt):
+    segs = [{"f": s["departure_airport"]["id"], "ft": s["departure_airport"]["time"],
+             "t": s["arrival_airport"]["id"], "tt": s["arrival_airport"]["time"],
+             "al": s.get("airline"), "fn": s.get("flight_number")}
+            for s in opt["flights"]]
+    lay = [{"id": l.get("id"), "dur": l.get("duration")} for l in opt.get("layovers", [])]
+    return {"segs": segs, "layovers": lay, "stops": _stops(opt),
+            "duration": opt.get("total_duration")}
+
+
+def confirm(fri, sun, dep_ids, arr_ids):
+    """Two SerpApi calls -> real cheapest schedule-matching round trip, or None."""
+    if not SERPAPI_KEY:
+        return None
+    base = {"departure_id": ",".join(dep_ids), "arrival_id": ",".join(arr_ids),
+            "outbound_date": fri.isoformat(), "return_date": sun.isoformat()}
+    d1 = _serp(base)
+    if not d1:
+        return None
+    outs = (d1.get("best_flights") or []) + (d1.get("other_flights") or [])
+    qo = sorted([o for o in outs if _qual_out(o, fri, dep_ids, arr_ids)],
+                key=lambda o: o["price"])
+    if not qo or not qo[0].get("departure_token"):
+        return None
+    out = qo[0]
+    d2 = _serp({**base, "departure_token": out["departure_token"]})
+    if not d2:
+        return None
+    rets = (d2.get("best_flights") or []) + (d2.get("other_flights") or [])
+    qr = sorted([o for o in rets if _qual_ret(o, sun, arr_ids, dep_ids)],
+                key=lambda o: o["price"])
+    if not qr:
+        return None
+    ret = qr[0]
+    return {"price": float(ret["price"]),
+            "checked": datetime.now().isoformat(timespec="seconds"),
+            "out": _leg(out), "ret": _leg(ret),
+            "link": gflink(dep_ids, arr_ids, fri, sun)}
+
+
+# --------------------------------------------------------------------------- #
+# history + run
+# --------------------------------------------------------------------------- #
 def load_history():
     if os.path.exists(HISTORY_PATH):
         with open(HISTORY_PATH) as f:
-            return json.load(f)
-    return {}
+            h = json.load(f)
+        if "forward" in h or "reverse" in h:      # already nested
+            return {"forward": h.get("forward", {}), "reverse": h.get("reverse", {})}
+    return {"forward": {}, "reverse": {}}
 
 
 def save_history(h):
@@ -268,68 +256,68 @@ def save_history(h):
         json.dump(h, f, indent=2)
 
 
-def run():
+def run(populate=False):
     history = load_history()
     now = datetime.now().isoformat(timespec="seconds")
     alerts = []
-    confirms_left = CONFIG["max_confirms_per_run"]
+    events_left = 20 if populate else CONFIG["max_confirm_events_per_run"]
 
-    for fri, sun in upcoming_weekends(CONFIG["weeks_ahead"]):
-        key = fri.isoformat()
-        rec = history.setdefault(key, {
-            "friday": key, "sunday": sun.isoformat(),
-            "link": google_flights_link(fri, sun),
-            "radar_low": None, "confirmed_low": None, "samples": [],
-        })
+    for trip_key, spec in TRIPS.items():
+        dep_ids, arr_ids = spec["out"]
+        book = history.setdefault(trip_key, {})
+        print(f"\n[{spec['label']}]")
+        for fri, sun in upcoming_weekends(CONFIG["weeks_ahead"]):
+            key = fri.isoformat()
+            rec = book.setdefault(key, {"friday": key, "sunday": sun.isoformat(),
+                                        "radar_low": None, "samples": [],
+                                        "confirmed": None, "confirmed_low": None})
+            price = radar(trip_key, fri, sun)
+            if price is None:
+                continue
+            rec["samples"].append({"t": now, "radar": price})
+            prev = rec["radar_low"]
+            new_low = prev is None or price < prev
+            if new_low:
+                rec["radar_low"] = price
+            below = CONFIG["target_price"] is not None and price <= CONFIG["target_price"]
 
-        price, meta = radar(fri, sun)
-        if price is None:
-            print(f"  {key}: radar found nothing")
-            time.sleep(0.2)
-            continue
-        rec["samples"].append({"t": now, "radar": price})
-
-        prev = rec["radar_low"]
-        is_new_low = prev is None or price < prev
-        below_target = CONFIG["target_price"] is not None and price <= CONFIG["target_price"]
-        if is_new_low:
-            rec["radar_low"] = price
-
-        tag = ""
-        # spend a SerpApi call only when it's worth it (new low, not the first sighting)
-        if ((is_new_low and prev is not None) or below_target) and confirms_left > 0:
-            confirms_left -= 1
-            got = confirm(fri, sun, (meta or {}).get("dest", "JFK"))
-            if got:
-                cprev = rec["confirmed_low"]
-                if cprev is None or got["price"] < cprev:
-                    rec["confirmed_low"] = got["price"]
-                    alerts.append((key, cprev, got, rec["link"]))
-                    tag = "  *** CONFIRMED NEW LOW ***"
-
-        print(f"  {key}: radar ${price:.0f} (low ${rec['radar_low']:.0f}){tag}")
-        time.sleep(0.2)
+            want = populate or (new_low and prev is not None) or below
+            tag = ""
+            if want and events_left > 0:
+                events_left -= 1
+                c = confirm(fri, sun, dep_ids, arr_ids)
+                if c:
+                    rec["confirmed"] = c
+                    cprev = rec["confirmed_low"]
+                    if cprev is None or c["price"] < cprev:
+                        rec["confirmed_low"] = c["price"]
+                        if cprev is not None or (not populate):
+                            alerts.append((spec["label"], key, cprev, c))
+                            tag = "  *** CONFIRMED LOW ***"
+                    time.sleep(0.4)
+            realp = rec["confirmed"]["price"] if rec["confirmed"] else None
+            print(f"  {key}: radar ${price:.0f}"
+                  + (f" | real ${realp:.0f}" if realp else "") + tag)
+            time.sleep(0.15)
 
     save_history(history)
 
     if alerts:
         print("\n=== ALERTS ===")
         lines = []
-        for key, prev, got, link in alerts:
-            was = f"${prev:.0f} -> " if prev else ""
-            stops = "nonstop" if got["nonstop"] else "1-stop"
-            print(f"  {key}: {was}${got['price']:.0f} {stops} [{'/'.join(got['airlines'])}]")
-            print(f"     book: {link}")
+        for label, key, prev, c in alerts:
             dt = datetime.fromisoformat(key)
-            lines.append(f"{dt:%a %b %d}: {was}${got['price']:.0f} {stops} "
-                         f"({'/'.join(got['airlines'])})\n{link}")
-        title = (f"SFO-NYC low: ${min(g['price'] for _, _, g, _ in alerts):.0f}"
-                 if len(alerts) == 1 else f"{len(alerts)} SFO-NYC weekend lows")
-        notify(title, "\n\n".join(lines))
+            was = f"${prev:.0f} -> " if prev else ""
+            stops = "nonstop" if c["out"]["stops"] == 0 and c["ret"]["stops"] == 0 else "connect"
+            print(f"  [{label}] {key}: {was}${c['price']:.0f} ({stops})")
+            lines.append(f"{label} — {dt:%a %b %d}: {was}${c['price']:.0f} ({stops})\n{c['link']}")
+        notify(f"Flight low: ${min(c['price'] for *_, c in alerts):.0f}",
+               "\n\n".join(lines))
     else:
         print("\nNo confirmed new lows this sweep.")
     return alerts
 
 
 if __name__ == "__main__":
-    run()
+    import sys
+    run(populate="--populate" in sys.argv)

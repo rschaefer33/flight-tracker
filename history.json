@@ -1,463 +1,1129 @@
 {
-  "2026-08-28": {
-    "friday": "2026-08-28",
-    "sunday": "2026-08-30",
-    "link": "https://www.google.com/travel/flights?q=flights%20from%20SFO%20to%20New%20York%20on%202026-08-28%20returning%202026-08-30",
-    "radar_low": 453.0,
-    "confirmed_low": null,
-    "samples": [
-      {
-        "t": "2026-08-23T22:29:41",
-        "radar": 453.0
+  "forward": {
+    "2026-08-28": {
+      "friday": "2026-08-28",
+      "sunday": "2026-08-30",
+      "radar_low": 453.0,
+      "samples": [
+        {
+          "t": "2026-08-23T22:59:00",
+          "radar": 453.0
+        }
+      ],
+      "confirmed": {
+        "price": 755.0,
+        "checked": "2026-08-23T22:59:01",
+        "out": {
+          "segs": [
+            {
+              "f": "SFO",
+              "ft": "2026-08-28 23:59",
+              "t": "JFK",
+              "tt": "2026-08-29 08:43",
+              "al": "JetBlue",
+              "fn": "B6 816"
+            }
+          ],
+          "layovers": [],
+          "stops": 0,
+          "duration": 344
+        },
+        "ret": {
+          "segs": [
+            {
+              "f": "JFK",
+              "ft": "2026-08-30 15:45",
+              "t": "SFO",
+              "tt": "2026-08-30 19:13",
+              "al": "JetBlue",
+              "fn": "B6 415"
+            }
+          ],
+          "layovers": [],
+          "stops": 0,
+          "duration": 388
+        },
+        "link": "https://www.google.com/travel/flights?q=flights%20from%20SFO%20to%20New%20York%20on%202026-08-28%20returning%202026-08-30"
       },
-      {
-        "t": "2026-08-24T05:34:47",
-        "radar": 453.0
-      }
-    ]
-  },
-  "2026-09-04": {
-    "friday": "2026-09-04",
-    "sunday": "2026-09-06",
-    "link": "https://www.google.com/travel/flights?q=flights%20from%20SFO%20to%20New%20York%20on%202026-09-04%20returning%202026-09-06",
-    "radar_low": 453.0,
-    "confirmed_low": null,
-    "samples": [
-      {
-        "t": "2026-08-23T22:29:41",
-        "radar": 453.0
+      "confirmed_low": 755.0
+    },
+    "2026-09-04": {
+      "friday": "2026-09-04",
+      "sunday": "2026-09-06",
+      "radar_low": 453.0,
+      "samples": [
+        {
+          "t": "2026-08-23T22:59:00",
+          "radar": 453.0
+        }
+      ],
+      "confirmed": {
+        "price": 655.0,
+        "checked": "2026-08-23T22:59:02",
+        "out": {
+          "segs": [
+            {
+              "f": "SFO",
+              "ft": "2026-09-04 22:33",
+              "t": "JFK",
+              "tt": "2026-09-05 07:19",
+              "al": "Alaska",
+              "fn": "AS 40"
+            }
+          ],
+          "layovers": [],
+          "stops": 0,
+          "duration": 346
+        },
+        "ret": {
+          "segs": [
+            {
+              "f": "JFK",
+              "ft": "2026-09-06 16:46",
+              "t": "SFO",
+              "tt": "2026-09-06 20:02",
+              "al": "Alaska",
+              "fn": "AS 27"
+            }
+          ],
+          "layovers": [],
+          "stops": 0,
+          "duration": 376
+        },
+        "link": "https://www.google.com/travel/flights?q=flights%20from%20SFO%20to%20New%20York%20on%202026-09-04%20returning%202026-09-06"
       },
-      {
-        "t": "2026-08-24T05:34:47",
-        "radar": 453.0
-      }
-    ]
-  },
-  "2026-09-11": {
-    "friday": "2026-09-11",
-    "sunday": "2026-09-13",
-    "link": "https://www.google.com/travel/flights?q=flights%20from%20SFO%20to%20New%20York%20on%202026-09-11%20returning%202026-09-13",
-    "radar_low": 368.0,
-    "confirmed_low": null,
-    "samples": [
-      {
-        "t": "2026-08-23T22:29:41",
-        "radar": 368.0
+      "confirmed_low": 655.0
+    },
+    "2026-09-11": {
+      "friday": "2026-09-11",
+      "sunday": "2026-09-13",
+      "radar_low": 368.0,
+      "samples": [
+        {
+          "t": "2026-08-23T22:59:00",
+          "radar": 368.0
+        }
+      ],
+      "confirmed": null,
+      "confirmed_low": null
+    },
+    "2026-09-18": {
+      "friday": "2026-09-18",
+      "sunday": "2026-09-20",
+      "radar_low": null,
+      "samples": [],
+      "confirmed": null,
+      "confirmed_low": null
+    },
+    "2026-09-25": {
+      "friday": "2026-09-25",
+      "sunday": "2026-09-27",
+      "radar_low": 345.0,
+      "samples": [
+        {
+          "t": "2026-08-23T22:59:00",
+          "radar": 345.0
+        }
+      ],
+      "confirmed": {
+        "price": 580.0,
+        "checked": "2026-08-23T22:59:05",
+        "out": {
+          "segs": [
+            {
+              "f": "SFO",
+              "ft": "2026-09-25 22:46",
+              "t": "ORD",
+              "tt": "2026-09-26 05:00",
+              "al": "American",
+              "fn": "AA 2113"
+            },
+            {
+              "f": "ORD",
+              "ft": "2026-09-26 06:29",
+              "t": "EWR",
+              "tt": "2026-09-26 09:49",
+              "al": "American",
+              "fn": "AA 699"
+            }
+          ],
+          "layovers": [
+            {
+              "id": "ORD",
+              "dur": 89
+            }
+          ],
+          "stops": 1,
+          "duration": 483
+        },
+        "ret": {
+          "segs": [
+            {
+              "f": "EWR",
+              "ft": "2026-09-27 17:26",
+              "t": "DFW",
+              "tt": "2026-09-27 20:21",
+              "al": "American",
+              "fn": "AA 1810"
+            },
+            {
+              "f": "DFW",
+              "ft": "2026-09-27 21:40",
+              "t": "SFO",
+              "tt": "2026-09-27 23:28",
+              "al": "American",
+              "fn": "AA 2775"
+            }
+          ],
+          "layovers": [
+            {
+              "id": "DFW",
+              "dur": 79
+            }
+          ],
+          "stops": 1,
+          "duration": 542
+        },
+        "link": "https://www.google.com/travel/flights?q=flights%20from%20SFO%20to%20New%20York%20on%202026-09-25%20returning%202026-09-27"
       },
-      {
-        "t": "2026-08-24T05:34:47",
-        "radar": 368.0
-      }
-    ]
-  },
-  "2026-09-18": {
-    "friday": "2026-09-18",
-    "sunday": "2026-09-20",
-    "link": "https://www.google.com/travel/flights?q=flights%20from%20SFO%20to%20New%20York%20on%202026-09-18%20returning%202026-09-20",
-    "radar_low": null,
-    "confirmed_low": null,
-    "samples": []
-  },
-  "2026-09-25": {
-    "friday": "2026-09-25",
-    "sunday": "2026-09-27",
-    "link": "https://www.google.com/travel/flights?q=flights%20from%20SFO%20to%20New%20York%20on%202026-09-25%20returning%202026-09-27",
-    "radar_low": 345.0,
-    "confirmed_low": null,
-    "samples": [
-      {
-        "t": "2026-08-23T22:29:41",
-        "radar": 345.0
+      "confirmed_low": 580.0
+    },
+    "2026-10-02": {
+      "friday": "2026-10-02",
+      "sunday": "2026-10-04",
+      "radar_low": null,
+      "samples": [],
+      "confirmed": null,
+      "confirmed_low": null
+    },
+    "2026-10-09": {
+      "friday": "2026-10-09",
+      "sunday": "2026-10-11",
+      "radar_low": 405.0,
+      "samples": [
+        {
+          "t": "2026-08-23T22:59:00",
+          "radar": 405.0
+        }
+      ],
+      "confirmed": {
+        "price": 848.0,
+        "checked": "2026-08-23T22:59:06",
+        "out": {
+          "segs": [
+            {
+              "f": "SFO",
+              "ft": "2026-10-09 23:10",
+              "t": "IAD",
+              "tt": "2026-10-10 07:31",
+              "al": "United",
+              "fn": "UA 2111"
+            },
+            {
+              "f": "IAD",
+              "ft": "2026-10-10 08:20",
+              "t": "LGA",
+              "tt": "2026-10-10 09:44",
+              "al": "United",
+              "fn": "UA 4032"
+            }
+          ],
+          "layovers": [
+            {
+              "id": "IAD",
+              "dur": 49
+            }
+          ],
+          "stops": 1,
+          "duration": 454
+        },
+        "ret": {
+          "segs": [
+            {
+              "f": "LGA",
+              "ft": "2026-10-11 16:59",
+              "t": "DEN",
+              "tt": "2026-10-11 19:27",
+              "al": "United",
+              "fn": "UA 2834"
+            },
+            {
+              "f": "DEN",
+              "ft": "2026-10-11 21:05",
+              "t": "SFO",
+              "tt": "2026-10-11 22:51",
+              "al": "United",
+              "fn": "UA 2123"
+            }
+          ],
+          "layovers": [
+            {
+              "id": "DEN",
+              "dur": 98
+            }
+          ],
+          "stops": 1,
+          "duration": 532
+        },
+        "link": "https://www.google.com/travel/flights?q=flights%20from%20SFO%20to%20New%20York%20on%202026-10-09%20returning%202026-10-11"
       },
-      {
-        "t": "2026-08-24T05:34:47",
-        "radar": 345.0
-      }
-    ]
+      "confirmed_low": 848.0
+    },
+    "2026-10-16": {
+      "friday": "2026-10-16",
+      "sunday": "2026-10-18",
+      "radar_low": null,
+      "samples": [],
+      "confirmed": null,
+      "confirmed_low": null
+    },
+    "2026-10-23": {
+      "friday": "2026-10-23",
+      "sunday": "2026-10-25",
+      "radar_low": null,
+      "samples": [],
+      "confirmed": null,
+      "confirmed_low": null
+    },
+    "2026-10-30": {
+      "friday": "2026-10-30",
+      "sunday": "2026-11-01",
+      "radar_low": null,
+      "samples": [],
+      "confirmed": null,
+      "confirmed_low": null
+    },
+    "2026-11-06": {
+      "friday": "2026-11-06",
+      "sunday": "2026-11-08",
+      "radar_low": null,
+      "samples": [],
+      "confirmed": null,
+      "confirmed_low": null
+    },
+    "2026-11-13": {
+      "friday": "2026-11-13",
+      "sunday": "2026-11-15",
+      "radar_low": null,
+      "samples": [],
+      "confirmed": null,
+      "confirmed_low": null
+    },
+    "2026-11-20": {
+      "friday": "2026-11-20",
+      "sunday": "2026-11-22",
+      "radar_low": null,
+      "samples": [],
+      "confirmed": null,
+      "confirmed_low": null
+    },
+    "2026-11-27": {
+      "friday": "2026-11-27",
+      "sunday": "2026-11-29",
+      "radar_low": null,
+      "samples": [],
+      "confirmed": null,
+      "confirmed_low": null
+    },
+    "2026-12-04": {
+      "friday": "2026-12-04",
+      "sunday": "2026-12-06",
+      "radar_low": null,
+      "samples": [],
+      "confirmed": null,
+      "confirmed_low": null
+    },
+    "2026-12-11": {
+      "friday": "2026-12-11",
+      "sunday": "2026-12-13",
+      "radar_low": null,
+      "samples": [],
+      "confirmed": null,
+      "confirmed_low": null
+    },
+    "2026-12-18": {
+      "friday": "2026-12-18",
+      "sunday": "2026-12-20",
+      "radar_low": null,
+      "samples": [],
+      "confirmed": null,
+      "confirmed_low": null
+    },
+    "2026-12-25": {
+      "friday": "2026-12-25",
+      "sunday": "2026-12-27",
+      "radar_low": null,
+      "samples": [],
+      "confirmed": null,
+      "confirmed_low": null
+    },
+    "2027-01-01": {
+      "friday": "2027-01-01",
+      "sunday": "2027-01-03",
+      "radar_low": null,
+      "samples": [],
+      "confirmed": null,
+      "confirmed_low": null
+    },
+    "2027-01-08": {
+      "friday": "2027-01-08",
+      "sunday": "2027-01-10",
+      "radar_low": null,
+      "samples": [],
+      "confirmed": null,
+      "confirmed_low": null
+    },
+    "2027-01-15": {
+      "friday": "2027-01-15",
+      "sunday": "2027-01-17",
+      "radar_low": null,
+      "samples": [],
+      "confirmed": null,
+      "confirmed_low": null
+    },
+    "2027-01-22": {
+      "friday": "2027-01-22",
+      "sunday": "2027-01-24",
+      "radar_low": null,
+      "samples": [],
+      "confirmed": null,
+      "confirmed_low": null
+    },
+    "2027-01-29": {
+      "friday": "2027-01-29",
+      "sunday": "2027-01-31",
+      "radar_low": null,
+      "samples": [],
+      "confirmed": null,
+      "confirmed_low": null
+    },
+    "2027-02-05": {
+      "friday": "2027-02-05",
+      "sunday": "2027-02-07",
+      "radar_low": null,
+      "samples": [],
+      "confirmed": null,
+      "confirmed_low": null
+    },
+    "2027-02-12": {
+      "friday": "2027-02-12",
+      "sunday": "2027-02-14",
+      "radar_low": null,
+      "samples": [],
+      "confirmed": null,
+      "confirmed_low": null
+    },
+    "2027-02-19": {
+      "friday": "2027-02-19",
+      "sunday": "2027-02-21",
+      "radar_low": null,
+      "samples": [],
+      "confirmed": null,
+      "confirmed_low": null
+    },
+    "2027-02-26": {
+      "friday": "2027-02-26",
+      "sunday": "2027-02-28",
+      "radar_low": null,
+      "samples": [],
+      "confirmed": null,
+      "confirmed_low": null
+    },
+    "2027-03-05": {
+      "friday": "2027-03-05",
+      "sunday": "2027-03-07",
+      "radar_low": null,
+      "samples": [],
+      "confirmed": null,
+      "confirmed_low": null
+    },
+    "2027-03-12": {
+      "friday": "2027-03-12",
+      "sunday": "2027-03-14",
+      "radar_low": null,
+      "samples": [],
+      "confirmed": null,
+      "confirmed_low": null
+    },
+    "2027-03-19": {
+      "friday": "2027-03-19",
+      "sunday": "2027-03-21",
+      "radar_low": null,
+      "samples": [],
+      "confirmed": null,
+      "confirmed_low": null
+    },
+    "2027-03-26": {
+      "friday": "2027-03-26",
+      "sunday": "2027-03-28",
+      "radar_low": null,
+      "samples": [],
+      "confirmed": null,
+      "confirmed_low": null
+    },
+    "2027-04-02": {
+      "friday": "2027-04-02",
+      "sunday": "2027-04-04",
+      "radar_low": null,
+      "samples": [],
+      "confirmed": null,
+      "confirmed_low": null
+    },
+    "2027-04-09": {
+      "friday": "2027-04-09",
+      "sunday": "2027-04-11",
+      "radar_low": null,
+      "samples": [],
+      "confirmed": null,
+      "confirmed_low": null
+    },
+    "2027-04-16": {
+      "friday": "2027-04-16",
+      "sunday": "2027-04-18",
+      "radar_low": null,
+      "samples": [],
+      "confirmed": null,
+      "confirmed_low": null
+    },
+    "2027-04-23": {
+      "friday": "2027-04-23",
+      "sunday": "2027-04-25",
+      "radar_low": null,
+      "samples": [],
+      "confirmed": null,
+      "confirmed_low": null
+    },
+    "2027-04-30": {
+      "friday": "2027-04-30",
+      "sunday": "2027-05-02",
+      "radar_low": null,
+      "samples": [],
+      "confirmed": null,
+      "confirmed_low": null
+    },
+    "2027-05-07": {
+      "friday": "2027-05-07",
+      "sunday": "2027-05-09",
+      "radar_low": null,
+      "samples": [],
+      "confirmed": null,
+      "confirmed_low": null
+    },
+    "2027-05-14": {
+      "friday": "2027-05-14",
+      "sunday": "2027-05-16",
+      "radar_low": null,
+      "samples": [],
+      "confirmed": null,
+      "confirmed_low": null
+    },
+    "2027-05-21": {
+      "friday": "2027-05-21",
+      "sunday": "2027-05-23",
+      "radar_low": null,
+      "samples": [],
+      "confirmed": null,
+      "confirmed_low": null
+    },
+    "2027-05-28": {
+      "friday": "2027-05-28",
+      "sunday": "2027-05-30",
+      "radar_low": null,
+      "samples": [],
+      "confirmed": null,
+      "confirmed_low": null
+    },
+    "2027-06-04": {
+      "friday": "2027-06-04",
+      "sunday": "2027-06-06",
+      "radar_low": null,
+      "samples": [],
+      "confirmed": null,
+      "confirmed_low": null
+    },
+    "2027-06-11": {
+      "friday": "2027-06-11",
+      "sunday": "2027-06-13",
+      "radar_low": null,
+      "samples": [],
+      "confirmed": null,
+      "confirmed_low": null
+    },
+    "2027-06-18": {
+      "friday": "2027-06-18",
+      "sunday": "2027-06-20",
+      "radar_low": null,
+      "samples": [],
+      "confirmed": null,
+      "confirmed_low": null
+    },
+    "2027-06-25": {
+      "friday": "2027-06-25",
+      "sunday": "2027-06-27",
+      "radar_low": null,
+      "samples": [],
+      "confirmed": null,
+      "confirmed_low": null
+    },
+    "2027-07-02": {
+      "friday": "2027-07-02",
+      "sunday": "2027-07-04",
+      "radar_low": null,
+      "samples": [],
+      "confirmed": null,
+      "confirmed_low": null
+    },
+    "2027-07-09": {
+      "friday": "2027-07-09",
+      "sunday": "2027-07-11",
+      "radar_low": null,
+      "samples": [],
+      "confirmed": null,
+      "confirmed_low": null
+    },
+    "2027-07-16": {
+      "friday": "2027-07-16",
+      "sunday": "2027-07-18",
+      "radar_low": null,
+      "samples": [],
+      "confirmed": null,
+      "confirmed_low": null
+    },
+    "2027-07-23": {
+      "friday": "2027-07-23",
+      "sunday": "2027-07-25",
+      "radar_low": null,
+      "samples": [],
+      "confirmed": null,
+      "confirmed_low": null
+    },
+    "2027-07-30": {
+      "friday": "2027-07-30",
+      "sunday": "2027-08-01",
+      "radar_low": null,
+      "samples": [],
+      "confirmed": null,
+      "confirmed_low": null
+    },
+    "2027-08-06": {
+      "friday": "2027-08-06",
+      "sunday": "2027-08-08",
+      "radar_low": null,
+      "samples": [],
+      "confirmed": null,
+      "confirmed_low": null
+    },
+    "2027-08-13": {
+      "friday": "2027-08-13",
+      "sunday": "2027-08-15",
+      "radar_low": null,
+      "samples": [],
+      "confirmed": null,
+      "confirmed_low": null
+    },
+    "2027-08-20": {
+      "friday": "2027-08-20",
+      "sunday": "2027-08-22",
+      "radar_low": null,
+      "samples": [],
+      "confirmed": null,
+      "confirmed_low": null
+    }
   },
-  "2026-10-02": {
-    "friday": "2026-10-02",
-    "sunday": "2026-10-04",
-    "link": "https://www.google.com/travel/flights?q=flights%20from%20SFO%20to%20New%20York%20on%202026-10-02%20returning%202026-10-04",
-    "radar_low": null,
-    "confirmed_low": null,
-    "samples": []
-  },
-  "2026-10-09": {
-    "friday": "2026-10-09",
-    "sunday": "2026-10-11",
-    "link": "https://www.google.com/travel/flights?q=flights%20from%20SFO%20to%20New%20York%20on%202026-10-09%20returning%202026-10-11",
-    "radar_low": 405.0,
-    "confirmed_low": null,
-    "samples": [
-      {
-        "t": "2026-08-23T22:29:41",
-        "radar": 405.0
+  "reverse": {
+    "2026-08-28": {
+      "friday": "2026-08-28",
+      "sunday": "2026-08-30",
+      "radar_low": 431.0,
+      "samples": [
+        {
+          "t": "2026-08-23T22:59:00",
+          "radar": 431.0
+        }
+      ],
+      "confirmed": {
+        "price": 826.0,
+        "checked": "2026-08-23T22:59:20",
+        "out": {
+          "segs": [
+            {
+              "f": "JFK",
+              "ft": "2026-08-28 20:55",
+              "t": "SFO",
+              "tt": "2026-08-29 00:36",
+              "al": "Delta",
+              "fn": "DL 1732"
+            }
+          ],
+          "layovers": [],
+          "stops": 0,
+          "duration": 401
+        },
+        "ret": {
+          "segs": [
+            {
+              "f": "SFO",
+              "ft": "2026-08-30 14:45",
+              "t": "JFK",
+              "tt": "2026-08-30 23:30",
+              "al": "JetBlue",
+              "fn": "B6 416"
+            }
+          ],
+          "layovers": [],
+          "stops": 0,
+          "duration": 345
+        },
+        "link": "https://www.google.com/travel/flights?q=flights%20from%20New%20York%20to%20SFO%20on%202026-08-28%20returning%202026-08-30"
       },
-      {
-        "t": "2026-08-24T05:34:47",
-        "radar": 405.0
-      }
-    ]
-  },
-  "2026-10-16": {
-    "friday": "2026-10-16",
-    "sunday": "2026-10-18",
-    "link": "https://www.google.com/travel/flights?q=flights%20from%20SFO%20to%20New%20York%20on%202026-10-16%20returning%202026-10-18",
-    "radar_low": null,
-    "confirmed_low": null,
-    "samples": []
-  },
-  "2026-10-23": {
-    "friday": "2026-10-23",
-    "sunday": "2026-10-25",
-    "link": "https://www.google.com/travel/flights?q=flights%20from%20SFO%20to%20New%20York%20on%202026-10-23%20returning%202026-10-25",
-    "radar_low": null,
-    "confirmed_low": null,
-    "samples": []
-  },
-  "2026-10-30": {
-    "friday": "2026-10-30",
-    "sunday": "2026-11-01",
-    "link": "https://www.google.com/travel/flights?q=flights%20from%20SFO%20to%20New%20York%20on%202026-10-30%20returning%202026-11-01",
-    "radar_low": null,
-    "confirmed_low": null,
-    "samples": []
-  },
-  "2026-11-06": {
-    "friday": "2026-11-06",
-    "sunday": "2026-11-08",
-    "link": "https://www.google.com/travel/flights?q=flights%20from%20SFO%20to%20New%20York%20on%202026-11-06%20returning%202026-11-08",
-    "radar_low": null,
-    "confirmed_low": null,
-    "samples": []
-  },
-  "2026-11-13": {
-    "friday": "2026-11-13",
-    "sunday": "2026-11-15",
-    "link": "https://www.google.com/travel/flights?q=flights%20from%20SFO%20to%20New%20York%20on%202026-11-13%20returning%202026-11-15",
-    "radar_low": null,
-    "confirmed_low": null,
-    "samples": []
-  },
-  "2026-11-20": {
-    "friday": "2026-11-20",
-    "sunday": "2026-11-22",
-    "link": "https://www.google.com/travel/flights?q=flights%20from%20SFO%20to%20New%20York%20on%202026-11-20%20returning%202026-11-22",
-    "radar_low": null,
-    "confirmed_low": null,
-    "samples": []
-  },
-  "2026-11-27": {
-    "friday": "2026-11-27",
-    "sunday": "2026-11-29",
-    "link": "https://www.google.com/travel/flights?q=flights%20from%20SFO%20to%20New%20York%20on%202026-11-27%20returning%202026-11-29",
-    "radar_low": null,
-    "confirmed_low": null,
-    "samples": []
-  },
-  "2026-12-04": {
-    "friday": "2026-12-04",
-    "sunday": "2026-12-06",
-    "link": "https://www.google.com/travel/flights?q=flights%20from%20SFO%20to%20New%20York%20on%202026-12-04%20returning%202026-12-06",
-    "radar_low": null,
-    "confirmed_low": null,
-    "samples": []
-  },
-  "2026-12-11": {
-    "friday": "2026-12-11",
-    "sunday": "2026-12-13",
-    "link": "https://www.google.com/travel/flights?q=flights%20from%20SFO%20to%20New%20York%20on%202026-12-11%20returning%202026-12-13",
-    "radar_low": null,
-    "confirmed_low": null,
-    "samples": []
-  },
-  "2026-12-18": {
-    "friday": "2026-12-18",
-    "sunday": "2026-12-20",
-    "link": "https://www.google.com/travel/flights?q=flights%20from%20SFO%20to%20New%20York%20on%202026-12-18%20returning%202026-12-20",
-    "radar_low": null,
-    "confirmed_low": null,
-    "samples": []
-  },
-  "2026-12-25": {
-    "friday": "2026-12-25",
-    "sunday": "2026-12-27",
-    "link": "https://www.google.com/travel/flights?q=flights%20from%20SFO%20to%20New%20York%20on%202026-12-25%20returning%202026-12-27",
-    "radar_low": null,
-    "confirmed_low": null,
-    "samples": []
-  },
-  "2027-01-01": {
-    "friday": "2027-01-01",
-    "sunday": "2027-01-03",
-    "link": "https://www.google.com/travel/flights?q=flights%20from%20SFO%20to%20New%20York%20on%202027-01-01%20returning%202027-01-03",
-    "radar_low": null,
-    "confirmed_low": null,
-    "samples": []
-  },
-  "2027-01-08": {
-    "friday": "2027-01-08",
-    "sunday": "2027-01-10",
-    "link": "https://www.google.com/travel/flights?q=flights%20from%20SFO%20to%20New%20York%20on%202027-01-08%20returning%202027-01-10",
-    "radar_low": null,
-    "confirmed_low": null,
-    "samples": []
-  },
-  "2027-01-15": {
-    "friday": "2027-01-15",
-    "sunday": "2027-01-17",
-    "link": "https://www.google.com/travel/flights?q=flights%20from%20SFO%20to%20New%20York%20on%202027-01-15%20returning%202027-01-17",
-    "radar_low": null,
-    "confirmed_low": null,
-    "samples": []
-  },
-  "2027-01-22": {
-    "friday": "2027-01-22",
-    "sunday": "2027-01-24",
-    "link": "https://www.google.com/travel/flights?q=flights%20from%20SFO%20to%20New%20York%20on%202027-01-22%20returning%202027-01-24",
-    "radar_low": null,
-    "confirmed_low": null,
-    "samples": []
-  },
-  "2027-01-29": {
-    "friday": "2027-01-29",
-    "sunday": "2027-01-31",
-    "link": "https://www.google.com/travel/flights?q=flights%20from%20SFO%20to%20New%20York%20on%202027-01-29%20returning%202027-01-31",
-    "radar_low": null,
-    "confirmed_low": null,
-    "samples": []
-  },
-  "2027-02-05": {
-    "friday": "2027-02-05",
-    "sunday": "2027-02-07",
-    "link": "https://www.google.com/travel/flights?q=flights%20from%20SFO%20to%20New%20York%20on%202027-02-05%20returning%202027-02-07",
-    "radar_low": null,
-    "confirmed_low": null,
-    "samples": []
-  },
-  "2027-02-12": {
-    "friday": "2027-02-12",
-    "sunday": "2027-02-14",
-    "link": "https://www.google.com/travel/flights?q=flights%20from%20SFO%20to%20New%20York%20on%202027-02-12%20returning%202027-02-14",
-    "radar_low": null,
-    "confirmed_low": null,
-    "samples": []
-  },
-  "2027-02-19": {
-    "friday": "2027-02-19",
-    "sunday": "2027-02-21",
-    "link": "https://www.google.com/travel/flights?q=flights%20from%20SFO%20to%20New%20York%20on%202027-02-19%20returning%202027-02-21",
-    "radar_low": null,
-    "confirmed_low": null,
-    "samples": []
-  },
-  "2027-02-26": {
-    "friday": "2027-02-26",
-    "sunday": "2027-02-28",
-    "link": "https://www.google.com/travel/flights?q=flights%20from%20SFO%20to%20New%20York%20on%202027-02-26%20returning%202027-02-28",
-    "radar_low": null,
-    "confirmed_low": null,
-    "samples": []
-  },
-  "2027-03-05": {
-    "friday": "2027-03-05",
-    "sunday": "2027-03-07",
-    "link": "https://www.google.com/travel/flights?q=flights%20from%20SFO%20to%20New%20York%20on%202027-03-05%20returning%202027-03-07",
-    "radar_low": null,
-    "confirmed_low": null,
-    "samples": []
-  },
-  "2027-03-12": {
-    "friday": "2027-03-12",
-    "sunday": "2027-03-14",
-    "link": "https://www.google.com/travel/flights?q=flights%20from%20SFO%20to%20New%20York%20on%202027-03-12%20returning%202027-03-14",
-    "radar_low": null,
-    "confirmed_low": null,
-    "samples": []
-  },
-  "2027-03-19": {
-    "friday": "2027-03-19",
-    "sunday": "2027-03-21",
-    "link": "https://www.google.com/travel/flights?q=flights%20from%20SFO%20to%20New%20York%20on%202027-03-19%20returning%202027-03-21",
-    "radar_low": null,
-    "confirmed_low": null,
-    "samples": []
-  },
-  "2027-03-26": {
-    "friday": "2027-03-26",
-    "sunday": "2027-03-28",
-    "link": "https://www.google.com/travel/flights?q=flights%20from%20SFO%20to%20New%20York%20on%202027-03-26%20returning%202027-03-28",
-    "radar_low": null,
-    "confirmed_low": null,
-    "samples": []
-  },
-  "2027-04-02": {
-    "friday": "2027-04-02",
-    "sunday": "2027-04-04",
-    "link": "https://www.google.com/travel/flights?q=flights%20from%20SFO%20to%20New%20York%20on%202027-04-02%20returning%202027-04-04",
-    "radar_low": null,
-    "confirmed_low": null,
-    "samples": []
-  },
-  "2027-04-09": {
-    "friday": "2027-04-09",
-    "sunday": "2027-04-11",
-    "link": "https://www.google.com/travel/flights?q=flights%20from%20SFO%20to%20New%20York%20on%202027-04-09%20returning%202027-04-11",
-    "radar_low": null,
-    "confirmed_low": null,
-    "samples": []
-  },
-  "2027-04-16": {
-    "friday": "2027-04-16",
-    "sunday": "2027-04-18",
-    "link": "https://www.google.com/travel/flights?q=flights%20from%20SFO%20to%20New%20York%20on%202027-04-16%20returning%202027-04-18",
-    "radar_low": null,
-    "confirmed_low": null,
-    "samples": []
-  },
-  "2027-04-23": {
-    "friday": "2027-04-23",
-    "sunday": "2027-04-25",
-    "link": "https://www.google.com/travel/flights?q=flights%20from%20SFO%20to%20New%20York%20on%202027-04-23%20returning%202027-04-25",
-    "radar_low": null,
-    "confirmed_low": null,
-    "samples": []
-  },
-  "2027-04-30": {
-    "friday": "2027-04-30",
-    "sunday": "2027-05-02",
-    "link": "https://www.google.com/travel/flights?q=flights%20from%20SFO%20to%20New%20York%20on%202027-04-30%20returning%202027-05-02",
-    "radar_low": null,
-    "confirmed_low": null,
-    "samples": []
-  },
-  "2027-05-07": {
-    "friday": "2027-05-07",
-    "sunday": "2027-05-09",
-    "link": "https://www.google.com/travel/flights?q=flights%20from%20SFO%20to%20New%20York%20on%202027-05-07%20returning%202027-05-09",
-    "radar_low": null,
-    "confirmed_low": null,
-    "samples": []
-  },
-  "2027-05-14": {
-    "friday": "2027-05-14",
-    "sunday": "2027-05-16",
-    "link": "https://www.google.com/travel/flights?q=flights%20from%20SFO%20to%20New%20York%20on%202027-05-14%20returning%202027-05-16",
-    "radar_low": null,
-    "confirmed_low": null,
-    "samples": []
-  },
-  "2027-05-21": {
-    "friday": "2027-05-21",
-    "sunday": "2027-05-23",
-    "link": "https://www.google.com/travel/flights?q=flights%20from%20SFO%20to%20New%20York%20on%202027-05-21%20returning%202027-05-23",
-    "radar_low": null,
-    "confirmed_low": null,
-    "samples": []
-  },
-  "2027-05-28": {
-    "friday": "2027-05-28",
-    "sunday": "2027-05-30",
-    "link": "https://www.google.com/travel/flights?q=flights%20from%20SFO%20to%20New%20York%20on%202027-05-28%20returning%202027-05-30",
-    "radar_low": null,
-    "confirmed_low": null,
-    "samples": []
-  },
-  "2027-06-04": {
-    "friday": "2027-06-04",
-    "sunday": "2027-06-06",
-    "link": "https://www.google.com/travel/flights?q=flights%20from%20SFO%20to%20New%20York%20on%202027-06-04%20returning%202027-06-06",
-    "radar_low": null,
-    "confirmed_low": null,
-    "samples": []
-  },
-  "2027-06-11": {
-    "friday": "2027-06-11",
-    "sunday": "2027-06-13",
-    "link": "https://www.google.com/travel/flights?q=flights%20from%20SFO%20to%20New%20York%20on%202027-06-11%20returning%202027-06-13",
-    "radar_low": null,
-    "confirmed_low": null,
-    "samples": []
-  },
-  "2027-06-18": {
-    "friday": "2027-06-18",
-    "sunday": "2027-06-20",
-    "link": "https://www.google.com/travel/flights?q=flights%20from%20SFO%20to%20New%20York%20on%202027-06-18%20returning%202027-06-20",
-    "radar_low": null,
-    "confirmed_low": null,
-    "samples": []
-  },
-  "2027-06-25": {
-    "friday": "2027-06-25",
-    "sunday": "2027-06-27",
-    "link": "https://www.google.com/travel/flights?q=flights%20from%20SFO%20to%20New%20York%20on%202027-06-25%20returning%202027-06-27",
-    "radar_low": null,
-    "confirmed_low": null,
-    "samples": []
-  },
-  "2027-07-02": {
-    "friday": "2027-07-02",
-    "sunday": "2027-07-04",
-    "link": "https://www.google.com/travel/flights?q=flights%20from%20SFO%20to%20New%20York%20on%202027-07-02%20returning%202027-07-04",
-    "radar_low": null,
-    "confirmed_low": null,
-    "samples": []
-  },
-  "2027-07-09": {
-    "friday": "2027-07-09",
-    "sunday": "2027-07-11",
-    "link": "https://www.google.com/travel/flights?q=flights%20from%20SFO%20to%20New%20York%20on%202027-07-09%20returning%202027-07-11",
-    "radar_low": null,
-    "confirmed_low": null,
-    "samples": []
-  },
-  "2027-07-16": {
-    "friday": "2027-07-16",
-    "sunday": "2027-07-18",
-    "link": "https://www.google.com/travel/flights?q=flights%20from%20SFO%20to%20New%20York%20on%202027-07-16%20returning%202027-07-18",
-    "radar_low": null,
-    "confirmed_low": null,
-    "samples": []
-  },
-  "2027-07-23": {
-    "friday": "2027-07-23",
-    "sunday": "2027-07-25",
-    "link": "https://www.google.com/travel/flights?q=flights%20from%20SFO%20to%20New%20York%20on%202027-07-23%20returning%202027-07-25",
-    "radar_low": null,
-    "confirmed_low": null,
-    "samples": []
-  },
-  "2027-07-30": {
-    "friday": "2027-07-30",
-    "sunday": "2027-08-01",
-    "link": "https://www.google.com/travel/flights?q=flights%20from%20SFO%20to%20New%20York%20on%202027-07-30%20returning%202027-08-01",
-    "radar_low": null,
-    "confirmed_low": null,
-    "samples": []
-  },
-  "2027-08-06": {
-    "friday": "2027-08-06",
-    "sunday": "2027-08-08",
-    "link": "https://www.google.com/travel/flights?q=flights%20from%20SFO%20to%20New%20York%20on%202027-08-06%20returning%202027-08-08",
-    "radar_low": null,
-    "confirmed_low": null,
-    "samples": []
-  },
-  "2027-08-13": {
-    "friday": "2027-08-13",
-    "sunday": "2027-08-15",
-    "link": "https://www.google.com/travel/flights?q=flights%20from%20SFO%20to%20New%20York%20on%202027-08-13%20returning%202027-08-15",
-    "radar_low": null,
-    "confirmed_low": null,
-    "samples": []
-  },
-  "2027-08-20": {
-    "friday": "2027-08-20",
-    "sunday": "2027-08-22",
-    "link": "https://www.google.com/travel/flights?q=flights%20from%20SFO%20to%20New%20York%20on%202027-08-20%20returning%202027-08-22",
-    "radar_low": null,
-    "confirmed_low": null,
-    "samples": []
+      "confirmed_low": 826.0
+    },
+    "2026-09-04": {
+      "friday": "2026-09-04",
+      "sunday": "2026-09-06",
+      "radar_low": null,
+      "samples": [],
+      "confirmed": null,
+      "confirmed_low": null
+    },
+    "2026-09-11": {
+      "friday": "2026-09-11",
+      "sunday": "2026-09-13",
+      "radar_low": null,
+      "samples": [],
+      "confirmed": null,
+      "confirmed_low": null
+    },
+    "2026-09-18": {
+      "friday": "2026-09-18",
+      "sunday": "2026-09-20",
+      "radar_low": 378.0,
+      "samples": [
+        {
+          "t": "2026-08-23T22:59:00",
+          "radar": 378.0
+        }
+      ],
+      "confirmed": {
+        "price": 572.0,
+        "checked": "2026-08-23T22:59:21",
+        "out": {
+          "segs": [
+            {
+              "f": "JFK",
+              "ft": "2026-09-18 21:00",
+              "t": "SFO",
+              "tt": "2026-09-19 00:34",
+              "al": "Delta",
+              "fn": "DL 1732"
+            }
+          ],
+          "layovers": [],
+          "stops": 0,
+          "duration": 394
+        },
+        "ret": {
+          "segs": [
+            {
+              "f": "SFO",
+              "ft": "2026-09-20 13:15",
+              "t": "JFK",
+              "tt": "2026-09-20 21:55",
+              "al": "Delta",
+              "fn": "DL 631"
+            }
+          ],
+          "layovers": [],
+          "stops": 0,
+          "duration": 340
+        },
+        "link": "https://www.google.com/travel/flights?q=flights%20from%20New%20York%20to%20SFO%20on%202026-09-18%20returning%202026-09-20"
+      },
+      "confirmed_low": 572.0
+    },
+    "2026-09-25": {
+      "friday": "2026-09-25",
+      "sunday": "2026-09-27",
+      "radar_low": null,
+      "samples": [],
+      "confirmed": null,
+      "confirmed_low": null
+    },
+    "2026-10-02": {
+      "friday": "2026-10-02",
+      "sunday": "2026-10-04",
+      "radar_low": null,
+      "samples": [],
+      "confirmed": null,
+      "confirmed_low": null
+    },
+    "2026-10-09": {
+      "friday": "2026-10-09",
+      "sunday": "2026-10-11",
+      "radar_low": null,
+      "samples": [],
+      "confirmed": null,
+      "confirmed_low": null
+    },
+    "2026-10-16": {
+      "friday": "2026-10-16",
+      "sunday": "2026-10-18",
+      "radar_low": null,
+      "samples": [],
+      "confirmed": null,
+      "confirmed_low": null
+    },
+    "2026-10-23": {
+      "friday": "2026-10-23",
+      "sunday": "2026-10-25",
+      "radar_low": null,
+      "samples": [],
+      "confirmed": null,
+      "confirmed_low": null
+    },
+    "2026-10-30": {
+      "friday": "2026-10-30",
+      "sunday": "2026-11-01",
+      "radar_low": null,
+      "samples": [],
+      "confirmed": null,
+      "confirmed_low": null
+    },
+    "2026-11-06": {
+      "friday": "2026-11-06",
+      "sunday": "2026-11-08",
+      "radar_low": null,
+      "samples": [],
+      "confirmed": null,
+      "confirmed_low": null
+    },
+    "2026-11-13": {
+      "friday": "2026-11-13",
+      "sunday": "2026-11-15",
+      "radar_low": null,
+      "samples": [],
+      "confirmed": null,
+      "confirmed_low": null
+    },
+    "2026-11-20": {
+      "friday": "2026-11-20",
+      "sunday": "2026-11-22",
+      "radar_low": null,
+      "samples": [],
+      "confirmed": null,
+      "confirmed_low": null
+    },
+    "2026-11-27": {
+      "friday": "2026-11-27",
+      "sunday": "2026-11-29",
+      "radar_low": null,
+      "samples": [],
+      "confirmed": null,
+      "confirmed_low": null
+    },
+    "2026-12-04": {
+      "friday": "2026-12-04",
+      "sunday": "2026-12-06",
+      "radar_low": null,
+      "samples": [],
+      "confirmed": null,
+      "confirmed_low": null
+    },
+    "2026-12-11": {
+      "friday": "2026-12-11",
+      "sunday": "2026-12-13",
+      "radar_low": null,
+      "samples": [],
+      "confirmed": null,
+      "confirmed_low": null
+    },
+    "2026-12-18": {
+      "friday": "2026-12-18",
+      "sunday": "2026-12-20",
+      "radar_low": null,
+      "samples": [],
+      "confirmed": null,
+      "confirmed_low": null
+    },
+    "2026-12-25": {
+      "friday": "2026-12-25",
+      "sunday": "2026-12-27",
+      "radar_low": null,
+      "samples": [],
+      "confirmed": null,
+      "confirmed_low": null
+    },
+    "2027-01-01": {
+      "friday": "2027-01-01",
+      "sunday": "2027-01-03",
+      "radar_low": null,
+      "samples": [],
+      "confirmed": null,
+      "confirmed_low": null
+    },
+    "2027-01-08": {
+      "friday": "2027-01-08",
+      "sunday": "2027-01-10",
+      "radar_low": null,
+      "samples": [],
+      "confirmed": null,
+      "confirmed_low": null
+    },
+    "2027-01-15": {
+      "friday": "2027-01-15",
+      "sunday": "2027-01-17",
+      "radar_low": null,
+      "samples": [],
+      "confirmed": null,
+      "confirmed_low": null
+    },
+    "2027-01-22": {
+      "friday": "2027-01-22",
+      "sunday": "2027-01-24",
+      "radar_low": null,
+      "samples": [],
+      "confirmed": null,
+      "confirmed_low": null
+    },
+    "2027-01-29": {
+      "friday": "2027-01-29",
+      "sunday": "2027-01-31",
+      "radar_low": null,
+      "samples": [],
+      "confirmed": null,
+      "confirmed_low": null
+    },
+    "2027-02-05": {
+      "friday": "2027-02-05",
+      "sunday": "2027-02-07",
+      "radar_low": null,
+      "samples": [],
+      "confirmed": null,
+      "confirmed_low": null
+    },
+    "2027-02-12": {
+      "friday": "2027-02-12",
+      "sunday": "2027-02-14",
+      "radar_low": null,
+      "samples": [],
+      "confirmed": null,
+      "confirmed_low": null
+    },
+    "2027-02-19": {
+      "friday": "2027-02-19",
+      "sunday": "2027-02-21",
+      "radar_low": null,
+      "samples": [],
+      "confirmed": null,
+      "confirmed_low": null
+    },
+    "2027-02-26": {
+      "friday": "2027-02-26",
+      "sunday": "2027-02-28",
+      "radar_low": null,
+      "samples": [],
+      "confirmed": null,
+      "confirmed_low": null
+    },
+    "2027-03-05": {
+      "friday": "2027-03-05",
+      "sunday": "2027-03-07",
+      "radar_low": null,
+      "samples": [],
+      "confirmed": null,
+      "confirmed_low": null
+    },
+    "2027-03-12": {
+      "friday": "2027-03-12",
+      "sunday": "2027-03-14",
+      "radar_low": null,
+      "samples": [],
+      "confirmed": null,
+      "confirmed_low": null
+    },
+    "2027-03-19": {
+      "friday": "2027-03-19",
+      "sunday": "2027-03-21",
+      "radar_low": null,
+      "samples": [],
+      "confirmed": null,
+      "confirmed_low": null
+    },
+    "2027-03-26": {
+      "friday": "2027-03-26",
+      "sunday": "2027-03-28",
+      "radar_low": null,
+      "samples": [],
+      "confirmed": null,
+      "confirmed_low": null
+    },
+    "2027-04-02": {
+      "friday": "2027-04-02",
+      "sunday": "2027-04-04",
+      "radar_low": null,
+      "samples": [],
+      "confirmed": null,
+      "confirmed_low": null
+    },
+    "2027-04-09": {
+      "friday": "2027-04-09",
+      "sunday": "2027-04-11",
+      "radar_low": null,
+      "samples": [],
+      "confirmed": null,
+      "confirmed_low": null
+    },
+    "2027-04-16": {
+      "friday": "2027-04-16",
+      "sunday": "2027-04-18",
+      "radar_low": null,
+      "samples": [],
+      "confirmed": null,
+      "confirmed_low": null
+    },
+    "2027-04-23": {
+      "friday": "2027-04-23",
+      "sunday": "2027-04-25",
+      "radar_low": null,
+      "samples": [],
+      "confirmed": null,
+      "confirmed_low": null
+    },
+    "2027-04-30": {
+      "friday": "2027-04-30",
+      "sunday": "2027-05-02",
+      "radar_low": null,
+      "samples": [],
+      "confirmed": null,
+      "confirmed_low": null
+    },
+    "2027-05-07": {
+      "friday": "2027-05-07",
+      "sunday": "2027-05-09",
+      "radar_low": null,
+      "samples": [],
+      "confirmed": null,
+      "confirmed_low": null
+    },
+    "2027-05-14": {
+      "friday": "2027-05-14",
+      "sunday": "2027-05-16",
+      "radar_low": null,
+      "samples": [],
+      "confirmed": null,
+      "confirmed_low": null
+    },
+    "2027-05-21": {
+      "friday": "2027-05-21",
+      "sunday": "2027-05-23",
+      "radar_low": null,
+      "samples": [],
+      "confirmed": null,
+      "confirmed_low": null
+    },
+    "2027-05-28": {
+      "friday": "2027-05-28",
+      "sunday": "2027-05-30",
+      "radar_low": null,
+      "samples": [],
+      "confirmed": null,
+      "confirmed_low": null
+    },
+    "2027-06-04": {
+      "friday": "2027-06-04",
+      "sunday": "2027-06-06",
+      "radar_low": null,
+      "samples": [],
+      "confirmed": null,
+      "confirmed_low": null
+    },
+    "2027-06-11": {
+      "friday": "2027-06-11",
+      "sunday": "2027-06-13",
+      "radar_low": null,
+      "samples": [],
+      "confirmed": null,
+      "confirmed_low": null
+    },
+    "2027-06-18": {
+      "friday": "2027-06-18",
+      "sunday": "2027-06-20",
+      "radar_low": null,
+      "samples": [],
+      "confirmed": null,
+      "confirmed_low": null
+    },
+    "2027-06-25": {
+      "friday": "2027-06-25",
+      "sunday": "2027-06-27",
+      "radar_low": null,
+      "samples": [],
+      "confirmed": null,
+      "confirmed_low": null
+    },
+    "2027-07-02": {
+      "friday": "2027-07-02",
+      "sunday": "2027-07-04",
+      "radar_low": null,
+      "samples": [],
+      "confirmed": null,
+      "confirmed_low": null
+    },
+    "2027-07-09": {
+      "friday": "2027-07-09",
+      "sunday": "2027-07-11",
+      "radar_low": null,
+      "samples": [],
+      "confirmed": null,
+      "confirmed_low": null
+    },
+    "2027-07-16": {
+      "friday": "2027-07-16",
+      "sunday": "2027-07-18",
+      "radar_low": null,
+      "samples": [],
+      "confirmed": null,
+      "confirmed_low": null
+    },
+    "2027-07-23": {
+      "friday": "2027-07-23",
+      "sunday": "2027-07-25",
+      "radar_low": null,
+      "samples": [],
+      "confirmed": null,
+      "confirmed_low": null
+    },
+    "2027-07-30": {
+      "friday": "2027-07-30",
+      "sunday": "2027-08-01",
+      "radar_low": null,
+      "samples": [],
+      "confirmed": null,
+      "confirmed_low": null
+    },
+    "2027-08-06": {
+      "friday": "2027-08-06",
+      "sunday": "2027-08-08",
+      "radar_low": null,
+      "samples": [],
+      "confirmed": null,
+      "confirmed_low": null
+    },
+    "2027-08-13": {
+      "friday": "2027-08-13",
+      "sunday": "2027-08-15",
+      "radar_low": null,
+      "samples": [],
+      "confirmed": null,
+      "confirmed_low": null
+    },
+    "2027-08-20": {
+      "friday": "2027-08-20",
+      "sunday": "2027-08-22",
+      "radar_low": null,
+      "samples": [],
+      "confirmed": null,
+      "confirmed_low": null
+    }
   }
 }
