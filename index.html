@@ -1,0 +1,130 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="color-scheme" content="light dark">
+<title>SFO ⇄ NYC weekend deals</title>
+<style>
+  :root {
+    --bg:#f6f7f9; --card:#ffffff; --ink:#111418; --muted:#6b7280;
+    --line:#e6e8eb; --accent:#0b7285; --up:#c0392b; --down:#2e7d32; --shadow:0 1px 3px rgba(0,0,0,.06);
+  }
+  @media (prefers-color-scheme: dark) {
+    :root { --bg:#0e1116; --card:#161b22; --ink:#e6edf3; --muted:#8b949e;
+      --line:#232a33; --accent:#39c0d3; --up:#ff6b6b; --down:#4ade80; --shadow:none; }
+  }
+  * { box-sizing:border-box; }
+  body { margin:0; background:var(--bg); color:var(--ink);
+    font:15px/1.5 -apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Helvetica,Arial,sans-serif; }
+  .wrap { max-width:860px; margin:0 auto; padding:32px 20px 60px; }
+  header h1 { font-size:1.5rem; margin:0 0 4px; letter-spacing:-.02em; }
+  header .sub { color:var(--muted); font-size:.9rem; margin:0; }
+  .stats { display:flex; gap:14px; margin:22px 0 18px; flex-wrap:wrap; }
+  .stat { background:var(--card); border:1px solid var(--line); border-radius:12px;
+    padding:12px 16px; box-shadow:var(--shadow); flex:1; min-width:130px; }
+  .stat .k { color:var(--muted); font-size:.72rem; text-transform:uppercase; letter-spacing:.06em; }
+  .stat .v { font-size:1.35rem; font-weight:650; margin-top:2px; }
+  .board { background:var(--card); border:1px solid var(--line); border-radius:14px;
+    overflow:hidden; box-shadow:var(--shadow); }
+  table { width:100%; border-collapse:collapse; }
+  th, td { padding:12px 14px; text-align:left; border-bottom:1px solid var(--line); white-space:nowrap; }
+  thead th { font-size:.72rem; text-transform:uppercase; letter-spacing:.06em; color:var(--muted); font-weight:600; }
+  tbody tr:last-child td { border-bottom:none; }
+  tbody tr:hover { background:color-mix(in srgb, var(--accent) 6%, transparent); }
+  .rank { font-size:1.05rem; width:44px; }
+  .wk { font-weight:600; }
+  .dout { display:block; font-weight:400; font-size:.74rem; color:var(--muted); }
+  .price { font-size:1.15rem; font-weight:700; }
+  .delta { font-size:.72rem; padding:1px 6px; border-radius:20px; margin-left:4px; }
+  .delta.flat { color:var(--down); background:color-mix(in srgb,var(--down) 15%,transparent); }
+  .delta.up { color:var(--up); background:color-mix(in srgb,var(--up) 15%,transparent); }
+  .muted { color:var(--muted); }
+  .spark.down { color:var(--down); } .spark.up { color:var(--up); }
+  .spark-empty { color:var(--muted); }
+  .book a { color:var(--accent); text-decoration:none; font-weight:600; }
+  .book a:hover { text-decoration:underline; }
+  .empty { text-align:center; color:var(--muted); padding:30px 14px; white-space:normal; }
+  .waiting { color:var(--muted); font-size:.85rem; margin:16px 2px 0; }
+  footer { color:var(--muted); font-size:.78rem; margin-top:22px; line-height:1.7; }
+  @media (max-width:560px) { .conf, thead .conf-h { display:none; } .trend, thead .trend-h { display:none; } }
+</style>
+</head>
+<body>
+  <div class="wrap">
+    <header>
+      <h1>SFO &#8644; NYC — weekend deals</h1>
+      <p class="sub">Fri 8pm+ out · land Sun night back · ≤1 stop · any airline, cheapest wins</p>
+    </header>
+
+    <div class="stats">
+      <div class="stat"><div class="k">Cheapest right now</div><div class="v">$345</div></div>
+      <div class="stat"><div class="k">Weekends priced</div><div class="v">5</div></div>
+      <div class="stat"><div class="k">Updated</div><div class="v" style="font-size:.95rem">Aug 23, 2026  10:46 PM</div></div>
+    </div>
+
+    <div class="board">
+      <table>
+        <thead><tr>
+          <th class="rank">#</th><th>Weekend</th><th>Now</th><th>Low seen</th>
+          <th class="conf-h">Confirmed</th><th class="trend-h">Trend</th><th>Link</th>
+        </tr></thead>
+        <tbody>
+      <tr>
+        <td class="rank">🥇</td>
+        <td class="wk">Fri Sep 25 – Sun Sep 27<span class="dout">33d out</span></td>
+        <td class="price">$345</td>
+        <td class="low">$345 <span class="delta flat">at low</span></td>
+        <td class="conf"><span class="muted" title="set once a drop is confirmed on Google Flights">—</span></td>
+        <td class="trend"><svg class="spark down" width="90" height="24" viewBox="0 0 90 24" preserveAspectRatio="none"><polyline points="0.0,22.0 90.0,22.0" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linejoin="round" stroke-linecap="round"/></svg></td>
+        <td class="book"><a href="https://www.google.com/travel/flights?q=flights%20from%20SFO%20to%20New%20York%20on%202026-09-25%20returning%202026-09-27" target="_blank" rel="noopener">Book ↗</a></td>
+      </tr>
+      <tr>
+        <td class="rank">🥈</td>
+        <td class="wk">Fri Sep 11 – Sun Sep 13<span class="dout">19d out</span></td>
+        <td class="price">$368</td>
+        <td class="low">$368 <span class="delta flat">at low</span></td>
+        <td class="conf"><span class="muted" title="set once a drop is confirmed on Google Flights">—</span></td>
+        <td class="trend"><svg class="spark down" width="90" height="24" viewBox="0 0 90 24" preserveAspectRatio="none"><polyline points="0.0,22.0 90.0,22.0" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linejoin="round" stroke-linecap="round"/></svg></td>
+        <td class="book"><a href="https://www.google.com/travel/flights?q=flights%20from%20SFO%20to%20New%20York%20on%202026-09-11%20returning%202026-09-13" target="_blank" rel="noopener">Book ↗</a></td>
+      </tr>
+      <tr>
+        <td class="rank">🥉</td>
+        <td class="wk">Fri Oct 9 – Sun Oct 11<span class="dout">47d out</span></td>
+        <td class="price">$405</td>
+        <td class="low">$405 <span class="delta flat">at low</span></td>
+        <td class="conf"><span class="muted" title="set once a drop is confirmed on Google Flights">—</span></td>
+        <td class="trend"><svg class="spark down" width="90" height="24" viewBox="0 0 90 24" preserveAspectRatio="none"><polyline points="0.0,22.0 90.0,22.0" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linejoin="round" stroke-linecap="round"/></svg></td>
+        <td class="book"><a href="https://www.google.com/travel/flights?q=flights%20from%20SFO%20to%20New%20York%20on%202026-10-09%20returning%202026-10-11" target="_blank" rel="noopener">Book ↗</a></td>
+      </tr>
+      <tr>
+        <td class="rank">4</td>
+        <td class="wk">Fri Aug 28 – Sun Aug 30<span class="dout">5d out</span></td>
+        <td class="price">$453</td>
+        <td class="low">$453 <span class="delta flat">at low</span></td>
+        <td class="conf"><span class="muted" title="set once a drop is confirmed on Google Flights">—</span></td>
+        <td class="trend"><svg class="spark down" width="90" height="24" viewBox="0 0 90 24" preserveAspectRatio="none"><polyline points="0.0,22.0 90.0,22.0" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linejoin="round" stroke-linecap="round"/></svg></td>
+        <td class="book"><a href="https://www.google.com/travel/flights?q=flights%20from%20SFO%20to%20New%20York%20on%202026-08-28%20returning%202026-08-30" target="_blank" rel="noopener">Book ↗</a></td>
+      </tr>
+      <tr>
+        <td class="rank">5</td>
+        <td class="wk">Fri Sep 4 – Sun Sep 6<span class="dout">12d out</span></td>
+        <td class="price">$453</td>
+        <td class="low">$453 <span class="delta flat">at low</span></td>
+        <td class="conf"><span class="muted" title="set once a drop is confirmed on Google Flights">—</span></td>
+        <td class="trend"><svg class="spark down" width="90" height="24" viewBox="0 0 90 24" preserveAspectRatio="none"><polyline points="0.0,22.0 90.0,22.0" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linejoin="round" stroke-linecap="round"/></svg></td>
+        <td class="book"><a href="https://www.google.com/travel/flights?q=flights%20from%20SFO%20to%20New%20York%20on%202026-09-04%20returning%202026-09-06" target="_blank" rel="noopener">Book ↗</a></td>
+      </tr>
+        </tbody>
+      </table>
+    </div>
+    <p class="waiting">+ 47 further-out weekends awaiting price data (free flight data only reaches ~2–3 months out; they fill in as the dates approach).</p>
+
+    <footer>
+      <b>Now</b> = coarse radar price (cheapest cached fare, may not match your exact times).
+      <b>Confirmed</b> = real Google-Flights price for a schedule-matching flight, set when a new low triggers a check.
+      Always click <b>Book</b> to see live times &amp; fares before purchasing.
+    </footer>
+  </div>
+</body>
+</html>

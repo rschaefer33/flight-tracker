@@ -29,10 +29,13 @@ jobs:
           NTFY_TOPIC: ${{ secrets.NTFY_TOPIC }}
         run: python3 tracker.py
 
-      - name: Persist price history
+      - name: Build dashboard
+        run: python3 build_site.py
+
+      - name: Persist history + dashboard
         run: |
           git config user.name "flight-tracker-bot"
           git config user.email "actions@users.noreply.github.com"
-          git add history.json
-          git commit -m "history: sweep $(date -u +%FT%TZ)" || echo "no changes"
+          git add history.json index.html
+          git commit -m "sweep $(date -u +%FT%TZ)" || echo "no changes"
           git push
