@@ -2,7 +2,7 @@ name: flight-tracker
 
 on:
   schedule:
-    - cron: "0 */3 * * *"   # every 3 hours (UTC)
+    - cron: "0 * * * *"   # hourly (UTC) — radar is free; confirms are daily-capped
   workflow_dispatch:          # lets you run it manually from the Actions tab
 
 permissions:

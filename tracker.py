@@ -36,8 +36,10 @@ CONFIG = {
     "ret_depart_after": "12:00",   # don't leave before noon Sun (no early flights)
     "ret_arrive_after": "15:00",   # land home at/after 3 PM Sun
     "ret_arrive_by_mon": "02:00",  # ...no later than ~1-2 AM Mon
-    "target_price": None,          # set a number to also alert under $X
-    "max_confirm_events_per_run": 5,   # each event = 2 SerpApi calls (budget guard)
+    "target_price": 500,           # alert when a REAL round trip drops to/under this
+    "max_confirm_events_per_run": 3,   # each event = 2 SerpApi calls (per-run guard)
+    "daily_confirm_events": 5,         # ...and a daily cap so hourly runs stay <250/mo
+    "populate_until": "2027-02-28",    # --populate confirms weekends through this date
 }
 
 # trip -> which airports are the origin/destination of the OUTBOUND leg
@@ -247,8 +249,9 @@ def load_history():
         with open(HISTORY_PATH) as f:
             h = json.load(f)
         if "forward" in h or "reverse" in h:      # already nested
-            return {"forward": h.get("forward", {}), "reverse": h.get("reverse", {})}
-    return {"forward": {}, "reverse": {}}
+            return {"forward": h.get("forward", {}), "reverse": h.get("reverse", {}),
+                    "_meta": h.get("_meta", {"date": "", "events": 0})}
+    return {"forward": {}, "reverse": {}, "_meta": {"date": "", "events": 0}}
 
 
 def save_history(h):
@@ -256,50 +259,87 @@ def save_history(h):
         json.dump(h, f, indent=2)
 
 
+def _apply_confirm(rec, label, key, fri, sun, dep_ids, arr_ids, target, populate, alerts):
+    """Run a confirm and fold the result into rec; queue an alert if warranted."""
+    c = confirm(fri, sun, dep_ids, arr_ids)
+    if not c:
+        return
+    cprev = rec["confirmed_low"]
+    rec["confirmed"] = c
+    is_low = cprev is None or c["price"] < cprev
+    if is_low:
+        rec["confirmed_low"] = c["price"]
+    crossed = (target is not None and c["price"] <= target and (cprev is None or cprev > target))
+    if not populate and ((is_low and cprev is not None) or crossed):
+        alerts.append((label, key, cprev, c))
+
+
 def run(populate=False):
     history = load_history()
     now = datetime.now().isoformat(timespec="seconds")
+    target = CONFIG["target_price"]
+    cutoff = date.fromisoformat(CONFIG["populate_until"])
     alerts = []
-    events_left = 20 if populate else CONFIG["max_confirm_events_per_run"]
 
+    # daily SerpApi budget so hourly sweeps can't blow the monthly free cap
+    meta = history.setdefault("_meta", {"date": "", "events": 0})
+    today = date.today().isoformat()
+    if meta["date"] != today:
+        meta.update(date=today, events=0)
+    if populate:
+        budget = 60
+    else:
+        budget = max(0, min(CONFIG["max_confirm_events_per_run"],
+                            CONFIG["daily_confirm_events"] - meta["events"]))
+
+    # PASS 1 — radar sweep (free); collect confirm candidates
+    allw, new_lows = [], []
     for trip_key, spec in TRIPS.items():
         dep_ids, arr_ids = spec["out"]
         book = history.setdefault(trip_key, {})
-        print(f"\n[{spec['label']}]")
         for fri, sun in upcoming_weekends(CONFIG["weeks_ahead"]):
             key = fri.isoformat()
             rec = book.setdefault(key, {"friday": key, "sunday": sun.isoformat(),
                                         "radar_low": None, "samples": [],
                                         "confirmed": None, "confirmed_low": None})
+            entry = (spec["label"], key, rec, fri, sun, dep_ids, arr_ids)
+            allw.append(entry)
             price = radar(trip_key, fri, sun)
-            if price is None:
-                continue
-            rec["samples"].append({"t": now, "radar": price})
-            prev = rec["radar_low"]
-            new_low = prev is None or price < prev
-            if new_low:
-                rec["radar_low"] = price
-            below = CONFIG["target_price"] is not None and price <= CONFIG["target_price"]
+            if price is not None:
+                rec["samples"].append({"t": now, "radar": price})
+                prev = rec["radar_low"]
+                if prev is None or price < prev:
+                    rec["radar_low"] = price
+                    if prev is not None:      # a genuine downward move
+                        new_lows.append(entry)
+            if populate and fri <= cutoff:
+                new_lows.append(entry)
 
-            want = populate or (new_low and prev is not None) or below
-            tag = ""
-            if want and events_left > 0:
-                events_left -= 1
-                c = confirm(fri, sun, dep_ids, arr_ids)
-                if c:
-                    rec["confirmed"] = c
-                    cprev = rec["confirmed_low"]
-                    if cprev is None or c["price"] < cprev:
-                        rec["confirmed_low"] = c["price"]
-                        if cprev is not None or (not populate):
-                            alerts.append((spec["label"], key, cprev, c))
-                            tag = "  *** CONFIRMED LOW ***"
-                    time.sleep(0.4)
-            realp = rec["confirmed"]["price"] if rec["confirmed"] else None
-            print(f"  {key}: radar ${price:.0f}"
-                  + (f" | real ${realp:.0f}" if realp else "") + tag)
-            time.sleep(0.15)
+    # PASS 2 — spend budget: new lows / populate first
+    done = set()
+    for label, key, rec, fri, sun, dep_ids, arr_ids in new_lows:
+        if budget <= 0:
+            break
+        if (label, key) in done:
+            continue
+        _apply_confirm(rec, label, key, fri, sun, dep_ids, arr_ids, target, populate, alerts)
+        done.add((label, key)); budget -= 1; meta["events"] += 1
+        time.sleep(0.4)
 
+    # PASS 3 — rotation: keep the stalest confirmed weekends fresh with leftover budget
+    if not populate and budget > 0:
+        conf = [e for e in allw if e[2].get("confirmed") and (e[0], e[1]) not in done]
+        conf.sort(key=lambda e: e[2]["confirmed"].get("checked", ""))
+        for label, key, rec, fri, sun, dep_ids, arr_ids in conf:
+            if budget <= 0:
+                break
+            _apply_confirm(rec, label, key, fri, sun, dep_ids, arr_ids, target, populate, alerts)
+            budget -= 1; meta["events"] += 1
+            time.sleep(0.4)
+
+    n_live = sum(1 for e in allw if e[2].get("confirmed"))
+    print(f"swept {len(allw)} weekend-slots · {n_live} live itineraries · "
+          f"confirms today: {meta['events']}")
     save_history(history)
 
     if alerts:
