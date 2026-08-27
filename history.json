@@ -172,66 +172,44 @@
         {
           "t": "2026-08-26T23:15:34",
           "radar": 437.0
+        },
+        {
+          "t": "2026-08-26T22:22:32",
+          "radar": 437.0
         }
       ],
       "confirmed": {
-        "price": 590.0,
-        "checked": "2026-08-25T06:16:47",
+        "price": 910.0,
+        "checked": "2026-08-26T22:23:08",
         "out": {
           "segs": [
             {
               "f": "SFO",
-              "ft": "2026-08-28 22:59",
-              "t": "DTW",
-              "tt": "2026-08-29 06:30",
-              "al": "Delta",
-              "fn": "DL 335"
-            },
-            {
-              "f": "DTW",
-              "ft": "2026-08-29 07:00",
-              "t": "EWR",
-              "tt": "2026-08-29 08:43",
-              "al": "Delta",
-              "fn": "DL 2566"
+              "ft": "2026-08-28 22:33",
+              "t": "JFK",
+              "tt": "2026-08-29 07:19",
+              "al": "Alaska",
+              "fn": "AS 40"
             }
           ],
-          "layovers": [
-            {
-              "id": "DTW",
-              "dur": 30
-            }
-          ],
-          "stops": 1,
-          "duration": 404
+          "layovers": [],
+          "stops": 0,
+          "duration": 346
         },
         "ret": {
           "segs": [
             {
-              "f": "EWR",
-              "ft": "2026-08-30 13:35",
-              "t": "DFW",
-              "tt": "2026-08-30 16:27",
-              "al": "Frontier",
-              "fn": "F9 2471"
-            },
-            {
-              "f": "DFW",
-              "ft": "2026-08-30 20:59",
+              "f": "JFK",
+              "ft": "2026-08-30 18:59",
               "t": "SFO",
-              "tt": "2026-08-30 22:54",
-              "al": "Frontier",
-              "fn": "F9 3999"
+              "tt": "2026-08-30 22:26",
+              "al": "Alaska",
+              "fn": "AS 39"
             }
           ],
-          "layovers": [
-            {
-              "id": "DFW",
-              "dur": 272
-            }
-          ],
-          "stops": 1,
-          "duration": 739
+          "layovers": [],
+          "stops": 0,
+          "duration": 387
         },
         "link": "https://www.google.com/travel/flights?q=flights%20from%20SFO%20to%20New%20York%20on%202026-08-28%20returning%202026-08-30"
       },
@@ -377,40 +355,44 @@
         {
           "t": "2026-08-26T23:15:34",
           "radar": 510.0
+        },
+        {
+          "t": "2026-08-26T22:22:32",
+          "radar": 504.0
         }
       ],
       "confirmed": {
         "price": 757.0,
-        "checked": "2026-08-25T06:16:48",
+        "checked": "2026-08-26T22:23:12",
         "out": {
           "segs": [
             {
               "f": "SFO",
-              "ft": "2026-09-04 22:18",
+              "ft": "2026-09-04 23:50",
               "t": "JFK",
-              "tt": "2026-09-05 07:01",
-              "al": "JetBlue",
-              "fn": "B6 16"
+              "tt": "2026-09-05 08:16",
+              "al": "Delta",
+              "fn": "DL 2112"
             }
           ],
           "layovers": [],
           "stops": 0,
-          "duration": 343
+          "duration": 326
         },
         "ret": {
           "segs": [
             {
               "f": "JFK",
-              "ft": "2026-09-06 16:46",
+              "ft": "2026-09-06 18:55",
               "t": "SFO",
-              "tt": "2026-09-06 20:02",
-              "al": "Alaska",
-              "fn": "AS 27"
+              "tt": "2026-09-06 22:33",
+              "al": "Delta",
+              "fn": "DL 667"
             }
           ],
           "layovers": [],
           "stops": 0,
-          "duration": 376
+          "duration": 398
         },
         "link": "https://www.google.com/travel/flights?q=flights%20from%20SFO%20to%20New%20York%20on%202026-09-04%20returning%202026-09-06"
       },
@@ -556,66 +538,44 @@
         {
           "t": "2026-08-26T23:15:34",
           "radar": 460.0
+        },
+        {
+          "t": "2026-08-26T22:22:32",
+          "radar": 460.0
         }
       ],
       "confirmed": {
-        "price": 673.0,
-        "checked": "2026-08-26T01:47:45",
+        "price": 733.0,
+        "checked": "2026-08-26T22:23:22",
         "out": {
           "segs": [
             {
               "f": "SFO",
-              "ft": "2026-09-11 22:46",
-              "t": "ORD",
-              "tt": "2026-09-12 05:00",
-              "al": "American",
-              "fn": "AA 2113"
-            },
-            {
-              "f": "ORD",
-              "ft": "2026-09-12 06:29",
-              "t": "EWR",
-              "tt": "2026-09-12 09:49",
-              "al": "American",
-              "fn": "AA 699"
+              "ft": "2026-09-11 22:33",
+              "t": "JFK",
+              "tt": "2026-09-12 07:19",
+              "al": "Alaska",
+              "fn": "AS 40"
             }
           ],
-          "layovers": [
-            {
-              "id": "ORD",
-              "dur": 89
-            }
-          ],
-          "stops": 1,
-          "duration": 483
+          "layovers": [],
+          "stops": 0,
+          "duration": 346
         },
         "ret": {
           "segs": [
             {
-              "f": "EWR",
-              "ft": "2026-09-13 17:26",
-              "t": "DFW",
-              "tt": "2026-09-13 20:21",
-              "al": "American",
-              "fn": "AA 1810"
-            },
-            {
-              "f": "DFW",
-              "ft": "2026-09-13 21:40",
+              "f": "JFK",
+              "ft": "2026-09-13 16:46",
               "t": "SFO",
-              "tt": "2026-09-13 23:28",
-              "al": "American",
-              "fn": "AA 2775"
+              "tt": "2026-09-13 20:02",
+              "al": "Alaska",
+              "fn": "AS 27"
             }
           ],
-          "layovers": [
-            {
-              "id": "DFW",
-              "dur": 79
-            }
-          ],
-          "stops": 1,
-          "duration": 542
+          "layovers": [],
+          "stops": 0,
+          "duration": 376
         },
         "link": "https://www.google.com/travel/flights?q=flights%20from%20SFO%20to%20New%20York%20on%202026-09-11%20returning%202026-09-13"
       },
@@ -724,6 +684,10 @@
         },
         {
           "t": "2026-08-26T23:15:34",
+          "radar": 341.0
+        },
+        {
+          "t": "2026-08-26T22:22:32",
           "radar": 341.0
         }
       ],
@@ -930,44 +894,48 @@
         {
           "t": "2026-08-26T23:15:34",
           "radar": 424.0
+        },
+        {
+          "t": "2026-08-26T22:22:32",
+          "radar": 424.0
         }
       ],
       "confirmed": {
-        "price": 939.0,
-        "checked": "2026-08-26T01:48:03",
+        "price": 663.0,
+        "checked": "2026-08-26T22:23:47",
         "out": {
           "segs": [
             {
               "f": "SFO",
-              "ft": "2026-10-09 21:15",
-              "t": "EWR",
-              "tt": "2026-10-10 05:46",
-              "al": "United",
-              "fn": "UA 698"
+              "ft": "2026-10-09 23:59",
+              "t": "JFK",
+              "tt": "2026-10-10 08:35",
+              "al": "JetBlue",
+              "fn": "B6 616"
             }
           ],
           "layovers": [],
           "stops": 0,
-          "duration": 331
+          "duration": 336
         },
         "ret": {
           "segs": [
             {
-              "f": "EWR",
-              "ft": "2026-10-11 13:20",
+              "f": "JFK",
+              "ft": "2026-10-11 18:59",
               "t": "SFO",
-              "tt": "2026-10-11 16:19",
-              "al": "United",
-              "fn": "UA 1227"
+              "tt": "2026-10-11 22:34",
+              "al": "Alaska",
+              "fn": "AS 39"
             }
           ],
           "layovers": [],
           "stops": 0,
-          "duration": 359
+          "duration": 395
         },
         "link": "https://www.google.com/travel/flights?q=flights%20from%20SFO%20to%20New%20York%20on%202026-10-09%20returning%202026-10-11"
       },
-      "confirmed_low": 775.0
+      "confirmed_low": 663.0
     },
     "2026-10-16": {
       "friday": "2026-10-16",
@@ -975,8 +943,8 @@
       "radar_low": null,
       "samples": [],
       "confirmed": {
-        "price": 630.0,
-        "checked": "2026-08-26T03:13:16",
+        "price": 658.0,
+        "checked": "2026-08-26T22:23:52",
         "out": {
           "segs": [
             {
@@ -1030,8 +998,8 @@
       "radar_low": null,
       "samples": [],
       "confirmed": {
-        "price": 605.0,
-        "checked": "2026-08-26T03:13:21",
+        "price": 658.0,
+        "checked": "2026-08-26T22:23:58",
         "out": {
           "segs": [
             {
@@ -1085,63 +1053,63 @@
       "radar_low": null,
       "samples": [],
       "confirmed": {
-        "price": 497.0,
-        "checked": "2026-08-24T23:10:01",
+        "price": 499.0,
+        "checked": "2026-08-26T22:24:03",
         "out": {
           "segs": [
             {
               "f": "SFO",
-              "ft": "2026-10-30 22:55",
-              "t": "DTW",
-              "tt": "2026-10-31 06:24",
-              "al": "Delta",
-              "fn": "DL 335"
+              "ft": "2026-10-30 22:03",
+              "t": "CLT",
+              "tt": "2026-10-31 06:00",
+              "al": "American",
+              "fn": "AA 2514"
             },
             {
-              "f": "DTW",
-              "ft": "2026-10-31 07:00",
-              "t": "LGA",
-              "tt": "2026-10-31 08:49",
-              "al": "Delta",
-              "fn": "DL 1487"
+              "f": "CLT",
+              "ft": "2026-10-31 07:47",
+              "t": "EWR",
+              "tt": "2026-10-31 09:39",
+              "al": "American",
+              "fn": "AA 1707"
             }
           ],
           "layovers": [
             {
-              "id": "DTW",
-              "dur": 36
+              "id": "CLT",
+              "dur": 107
             }
           ],
           "stops": 1,
-          "duration": 414
+          "duration": 516
         },
         "ret": {
           "segs": [
             {
-              "f": "LGA",
-              "ft": "2026-11-01 18:00",
-              "t": "ATL",
-              "tt": "2026-11-01 20:33",
-              "al": "Delta",
-              "fn": "DL 964"
+              "f": "EWR",
+              "ft": "2026-11-01 17:08",
+              "t": "CLT",
+              "tt": "2026-11-01 19:15",
+              "al": "American",
+              "fn": "AA 1216"
             },
             {
-              "f": "ATL",
-              "ft": "2026-11-01 21:49",
+              "f": "CLT",
+              "ft": "2026-11-01 20:15",
               "t": "SFO",
-              "tt": "2026-11-01 23:56",
-              "al": "Delta",
-              "fn": "DL 656"
+              "tt": "2026-11-01 22:59",
+              "al": "American",
+              "fn": "AA 2294"
             }
           ],
           "layovers": [
             {
-              "id": "ATL",
-              "dur": 76
+              "id": "CLT",
+              "dur": 60
             }
           ],
           "stops": 1,
-          "duration": 536
+          "duration": 531
         },
         "link": "https://www.google.com/travel/flights?q=flights%20from%20SFO%20to%20New%20York%20on%202026-10-30%20returning%202026-11-01"
       },
@@ -1153,67 +1121,41 @@
       "radar_low": null,
       "samples": [],
       "confirmed": {
-        "price": 497.0,
-        "checked": "2026-08-24T23:10:06",
+        "price": 453.0,
+        "checked": "2026-08-26T22:24:08",
         "out": {
           "segs": [
             {
               "f": "SFO",
-              "ft": "2026-11-06 21:25",
-              "t": "ATL",
-              "tt": "2026-11-07 04:59",
-              "al": "Delta",
-              "fn": "DL 635"
-            },
-            {
-              "f": "ATL",
-              "ft": "2026-11-07 07:30",
-              "t": "LGA",
-              "tt": "2026-11-07 09:38",
-              "al": "Delta",
-              "fn": "DL 814"
+              "ft": "2026-11-06 20:55",
+              "t": "JFK",
+              "tt": "2026-11-07 05:15",
+              "al": "JetBlue",
+              "fn": "B6 16"
             }
           ],
-          "layovers": [
-            {
-              "id": "ATL",
-              "dur": 151
-            }
-          ],
-          "stops": 1,
-          "duration": 553
+          "layovers": [],
+          "stops": 0,
+          "duration": 320
         },
         "ret": {
           "segs": [
             {
-              "f": "LGA",
-              "ft": "2026-11-08 18:00",
-              "t": "ATL",
-              "tt": "2026-11-08 20:33",
-              "al": "Delta",
-              "fn": "DL 964"
-            },
-            {
-              "f": "ATL",
-              "ft": "2026-11-08 21:49",
+              "f": "JFK",
+              "ft": "2026-11-08 21:00",
               "t": "SFO",
-              "tt": "2026-11-08 23:56",
-              "al": "Delta",
-              "fn": "DL 656"
+              "tt": "2026-11-09 00:43",
+              "al": "American",
+              "fn": "AA 177"
             }
           ],
-          "layovers": [
-            {
-              "id": "ATL",
-              "dur": 76
-            }
-          ],
-          "stops": 1,
-          "duration": 536
+          "layovers": [],
+          "stops": 0,
+          "duration": 403
         },
         "link": "https://www.google.com/travel/flights?q=flights%20from%20SFO%20to%20New%20York%20on%202026-11-06%20returning%202026-11-08"
       },
-      "confirmed_low": 497.0
+      "confirmed_low": 453.0
     },
     "2026-11-13": {
       "friday": "2026-11-13",
@@ -1221,67 +1163,67 @@
       "radar_low": null,
       "samples": [],
       "confirmed": {
-        "price": 962.0,
-        "checked": "2026-08-24T23:10:12",
+        "price": 388.0,
+        "checked": "2026-08-26T22:24:14",
         "out": {
           "segs": [
             {
               "f": "SFO",
-              "ft": "2026-11-13 22:40",
-              "t": "DTW",
-              "tt": "2026-11-14 06:08",
-              "al": "Delta",
-              "fn": "DL 335"
+              "ft": "2026-11-13 23:20",
+              "t": "IAD",
+              "tt": "2026-11-14 07:28",
+              "al": "United",
+              "fn": "UA 2837"
             },
             {
-              "f": "DTW",
-              "ft": "2026-11-14 07:00",
+              "f": "IAD",
+              "ft": "2026-11-14 08:15",
               "t": "LGA",
-              "tt": "2026-11-14 08:50",
-              "al": "Delta",
-              "fn": "DL 1487"
+              "tt": "2026-11-14 09:43",
+              "al": "United",
+              "fn": "UA 4030"
             }
           ],
           "layovers": [
             {
-              "id": "DTW",
-              "dur": 52
+              "id": "IAD",
+              "dur": 47
             }
           ],
           "stops": 1,
-          "duration": 430
+          "duration": 443
         },
         "ret": {
           "segs": [
             {
               "f": "LGA",
-              "ft": "2026-11-15 15:05",
-              "t": "MSP",
-              "tt": "2026-11-15 17:14",
-              "al": "Delta",
-              "fn": "DL 2349"
+              "ft": "2026-11-15 18:01",
+              "t": "ORD",
+              "tt": "2026-11-15 20:06",
+              "al": "American",
+              "fn": "AA 922"
             },
             {
-              "f": "MSP",
-              "ft": "2026-11-15 18:29",
+              "f": "ORD",
+              "ft": "2026-11-15 20:56",
               "t": "SFO",
-              "tt": "2026-11-15 20:36",
-              "al": "Delta",
-              "fn": "DL 2809"
+              "tt": "2026-11-15 23:55",
+              "al": "American",
+              "fn": "AA 2905"
             }
           ],
           "layovers": [
             {
-              "id": "MSP",
-              "dur": 75
+              "id": "ORD",
+              "dur": 50
             }
           ],
           "stops": 1,
-          "duration": 511
+          "duration": 534
         },
         "link": "https://www.google.com/travel/flights?q=flights%20from%20SFO%20to%20New%20York%20on%202026-11-13%20returning%202026-11-15"
       },
-      "confirmed_low": 962.0
+      "confirmed_low": 388.0
     },
     "2026-11-20": {
       "friday": "2026-11-20",
@@ -1289,8 +1231,8 @@
       "radar_low": null,
       "samples": [],
       "confirmed": {
-        "price": 659.0,
-        "checked": "2026-08-24T23:10:19",
+        "price": 724.0,
+        "checked": "2026-08-26T22:24:19",
         "out": {
           "segs": [
             {
@@ -1310,16 +1252,16 @@
           "segs": [
             {
               "f": "JFK",
-              "ft": "2026-11-22 21:00",
+              "ft": "2026-11-22 17:20",
               "t": "SFO",
-              "tt": "2026-11-23 00:47",
+              "tt": "2026-11-22 21:08",
               "al": "American",
-              "fn": "AA 177"
+              "fn": "AA 15"
             }
           ],
           "layovers": [],
           "stops": 0,
-          "duration": 407
+          "duration": 408
         },
         "link": "https://www.google.com/travel/flights?q=flights%20from%20SFO%20to%20New%20York%20on%202026-11-20%20returning%202026-11-22"
       },
@@ -1331,37 +1273,37 @@
       "radar_low": null,
       "samples": [],
       "confirmed": {
-        "price": 1071.0,
-        "checked": "2026-08-24T23:10:24",
+        "price": 1289.0,
+        "checked": "2026-08-26T22:24:29",
         "out": {
           "segs": [
             {
               "f": "SFO",
-              "ft": "2026-11-27 22:00",
-              "t": "JFK",
-              "tt": "2026-11-28 06:29",
-              "al": "American",
-              "fn": "AA 276"
+              "ft": "2026-11-27 21:30",
+              "t": "EWR",
+              "tt": "2026-11-28 05:57",
+              "al": "United",
+              "fn": "UA 2482"
             }
           ],
           "layovers": [],
           "stops": 0,
-          "duration": 329
+          "duration": 327
         },
         "ret": {
           "segs": [
             {
-              "f": "JFK",
-              "ft": "2026-11-29 21:35",
+              "f": "EWR",
+              "ft": "2026-11-29 16:30",
               "t": "SFO",
-              "tt": "2026-11-30 01:12",
-              "al": "Delta",
-              "fn": "DL 1732"
+              "tt": "2026-11-29 19:44",
+              "al": "United",
+              "fn": "UA 1844"
             }
           ],
           "layovers": [],
           "stops": 0,
-          "duration": 397
+          "duration": 374
         },
         "link": "https://www.google.com/travel/flights?q=flights%20from%20SFO%20to%20New%20York%20on%202026-11-27%20returning%202026-11-29"
       },
@@ -1373,54 +1315,54 @@
       "radar_low": null,
       "samples": [],
       "confirmed": {
-        "price": 443.0,
-        "checked": "2026-08-24T23:10:28",
+        "price": 429.0,
+        "checked": "2026-08-26T22:24:33",
         "out": {
           "segs": [
             {
               "f": "SFO",
-              "ft": "2026-12-04 21:44",
+              "ft": "2026-12-04 21:30",
               "t": "JFK",
-              "tt": "2026-12-05 06:20",
-              "al": "American",
-              "fn": "AA 276"
+              "tt": "2026-12-05 06:00",
+              "al": "JetBlue",
+              "fn": "B6 1016"
             }
           ],
           "layovers": [],
           "stops": 0,
-          "duration": 336
+          "duration": 330
         },
         "ret": {
           "segs": [
             {
               "f": "JFK",
-              "ft": "2026-12-06 15:01",
-              "t": "ORD",
-              "tt": "2026-12-06 16:57",
-              "al": "American",
-              "fn": "AA 3162"
+              "ft": "2026-12-06 15:45",
+              "t": "BOS",
+              "tt": "2026-12-06 17:03",
+              "al": "JetBlue",
+              "fn": "B6 618"
             },
             {
-              "f": "ORD",
-              "ft": "2026-12-06 19:00",
+              "f": "BOS",
+              "ft": "2026-12-06 19:40",
               "t": "SFO",
-              "tt": "2026-12-06 21:56",
-              "al": "American",
-              "fn": "AA 3156"
+              "tt": "2026-12-06 23:24",
+              "al": "JetBlue",
+              "fn": "B6 733"
             }
           ],
           "layovers": [
             {
-              "id": "ORD",
-              "dur": 123
+              "id": "BOS",
+              "dur": 157
             }
           ],
           "stops": 1,
-          "duration": 595
+          "duration": 639
         },
         "link": "https://www.google.com/travel/flights?q=flights%20from%20SFO%20to%20New%20York%20on%202026-12-04%20returning%202026-12-06"
       },
-      "confirmed_low": 443.0
+      "confirmed_low": 429.0
     },
     "2026-12-11": {
       "friday": "2026-12-11",
@@ -1428,8 +1370,8 @@
       "radar_low": null,
       "samples": [],
       "confirmed": {
-        "price": 443.0,
-        "checked": "2026-08-24T23:10:34",
+        "price": 444.0,
+        "checked": "2026-08-26T22:24:40",
         "out": {
           "segs": [
             {
@@ -1483,50 +1425,37 @@
       "radar_low": null,
       "samples": [],
       "confirmed": {
-        "price": 712.0,
-        "checked": "2026-08-24T23:10:38",
+        "price": 1157.0,
+        "checked": "2026-08-26T22:24:44",
         "out": {
           "segs": [
             {
               "f": "SFO",
               "ft": "2026-12-18 21:30",
-              "t": "JFK",
-              "tt": "2026-12-19 06:00",
-              "al": "JetBlue",
-              "fn": "B6 1016"
+              "t": "EWR",
+              "tt": "2026-12-19 06:01",
+              "al": "United",
+              "fn": "UA 2482"
             }
           ],
           "layovers": [],
           "stops": 0,
-          "duration": 330
+          "duration": 331
         },
         "ret": {
           "segs": [
             {
-              "f": "JFK",
-              "ft": "2026-12-20 18:23",
-              "t": "BOS",
-              "tt": "2026-12-20 19:41",
-              "al": "JetBlue",
-              "fn": "B6 918"
-            },
-            {
-              "f": "BOS",
-              "ft": "2026-12-20 20:45",
+              "f": "EWR",
+              "ft": "2026-12-20 15:00",
               "t": "SFO",
-              "tt": "2026-12-21 00:30",
-              "al": "JetBlue",
-              "fn": "B6 733"
+              "tt": "2026-12-20 18:32",
+              "al": "United",
+              "fn": "UA 794"
             }
           ],
-          "layovers": [
-            {
-              "id": "BOS",
-              "dur": 64
-            }
-          ],
-          "stops": 1,
-          "duration": 547
+          "layovers": [],
+          "stops": 0,
+          "duration": 392
         },
         "link": "https://www.google.com/travel/flights?q=flights%20from%20SFO%20to%20New%20York%20on%202026-12-18%20returning%202026-12-20"
       },
@@ -1538,8 +1467,8 @@
       "radar_low": null,
       "samples": [],
       "confirmed": {
-        "price": 954.0,
-        "checked": "2026-08-24T23:10:47",
+        "price": 945.0,
+        "checked": "2026-08-26T22:24:50",
         "out": {
           "segs": [
             {
@@ -1559,20 +1488,20 @@
           "segs": [
             {
               "f": "EWR",
-              "ft": "2026-12-27 19:15",
+              "ft": "2026-12-27 18:05",
               "t": "SFO",
-              "tt": "2026-12-27 22:59",
+              "tt": "2026-12-27 21:50",
               "al": "United",
-              "fn": "UA 2364"
+              "fn": "UA 2171"
             }
           ],
           "layovers": [],
           "stops": 0,
-          "duration": 404
+          "duration": 405
         },
         "link": "https://www.google.com/travel/flights?q=flights%20from%20SFO%20to%20New%20York%20on%202026-12-25%20returning%202026-12-27"
       },
-      "confirmed_low": 954.0
+      "confirmed_low": 945.0
     },
     "2027-01-01": {
       "friday": "2027-01-01",
@@ -1580,8 +1509,8 @@
       "radar_low": null,
       "samples": [],
       "confirmed": {
-        "price": 1029.0,
-        "checked": "2026-08-24T23:10:59",
+        "price": 1042.0,
+        "checked": "2026-08-26T22:24:56",
         "out": {
           "segs": [
             {
@@ -1622,37 +1551,63 @@
       "radar_low": null,
       "samples": [],
       "confirmed": {
-        "price": 458.0,
-        "checked": "2026-08-24T23:11:04",
+        "price": 578.0,
+        "checked": "2026-08-26T22:25:04",
         "out": {
           "segs": [
             {
               "f": "SFO",
-              "ft": "2027-01-08 23:00",
-              "t": "JFK",
-              "tt": "2027-01-09 07:45",
-              "al": "Alaska",
-              "fn": "AS 29"
+              "ft": "2027-01-08 22:45",
+              "t": "DTW",
+              "tt": "2027-01-09 06:20",
+              "al": "Delta",
+              "fn": "DL 335"
+            },
+            {
+              "f": "DTW",
+              "ft": "2027-01-09 07:05",
+              "t": "LGA",
+              "tt": "2027-01-09 09:00",
+              "al": "Delta",
+              "fn": "DL 1487"
             }
           ],
-          "layovers": [],
-          "stops": 0,
-          "duration": 345
+          "layovers": [
+            {
+              "id": "DTW",
+              "dur": 45
+            }
+          ],
+          "stops": 1,
+          "duration": 435
         },
         "ret": {
           "segs": [
             {
-              "f": "JFK",
-              "ft": "2027-01-10 16:27",
+              "f": "LGA",
+              "ft": "2027-01-10 17:00",
+              "t": "DTW",
+              "tt": "2027-01-10 19:06",
+              "al": "Delta",
+              "fn": "DL 999"
+            },
+            {
+              "f": "DTW",
+              "ft": "2027-01-10 20:20",
               "t": "SFO",
-              "tt": "2027-01-10 20:11",
-              "al": "Alaska",
-              "fn": "AS 581"
+              "tt": "2027-01-10 22:39",
+              "al": "Delta",
+              "fn": "DL 1327"
             }
           ],
-          "layovers": [],
-          "stops": 0,
-          "duration": 404
+          "layovers": [
+            {
+              "id": "DTW",
+              "dur": 74
+            }
+          ],
+          "stops": 1,
+          "duration": 519
         },
         "link": "https://www.google.com/travel/flights?q=flights%20from%20SFO%20to%20New%20York%20on%202027-01-08%20returning%202027-01-10"
       },
@@ -1664,8 +1619,8 @@
       "radar_low": null,
       "samples": [],
       "confirmed": {
-        "price": 430.0,
-        "checked": "2026-08-24T23:11:08",
+        "price": 450.0,
+        "checked": "2026-08-26T22:25:10",
         "out": {
           "segs": [
             {
@@ -1706,37 +1661,37 @@
       "radar_low": null,
       "samples": [],
       "confirmed": {
-        "price": 379.0,
-        "checked": "2026-08-24T23:11:12",
+        "price": 556.0,
+        "checked": "2026-08-26T22:25:17",
         "out": {
           "segs": [
             {
               "f": "SFO",
-              "ft": "2027-01-22 21:23",
-              "t": "JFK",
-              "tt": "2027-01-23 06:00",
-              "al": "American",
-              "fn": "AA 276"
+              "ft": "2027-01-22 22:50",
+              "t": "EWR",
+              "tt": "2027-01-23 07:34",
+              "al": "United",
+              "fn": "UA 649"
             }
           ],
           "layovers": [],
           "stops": 0,
-          "duration": 337
+          "duration": 344
         },
         "ret": {
           "segs": [
             {
-              "f": "JFK",
-              "ft": "2027-01-24 16:50",
+              "f": "EWR",
+              "ft": "2027-01-24 13:00",
               "t": "SFO",
-              "tt": "2027-01-24 20:21",
-              "al": "American",
-              "fn": "AA 15"
+              "tt": "2027-01-24 16:11",
+              "al": "United",
+              "fn": "UA 1227"
             }
           ],
           "layovers": [],
           "stops": 0,
-          "duration": 391
+          "duration": 371
         },
         "link": "https://www.google.com/travel/flights?q=flights%20from%20SFO%20to%20New%20York%20on%202027-01-22%20returning%202027-01-24"
       },
@@ -1749,7 +1704,7 @@
       "samples": [],
       "confirmed": {
         "price": 379.0,
-        "checked": "2026-08-24T23:11:17",
+        "checked": "2026-08-26T22:25:25",
         "out": {
           "segs": [
             {
@@ -1790,37 +1745,37 @@
       "radar_low": null,
       "samples": [],
       "confirmed": {
-        "price": 379.0,
-        "checked": "2026-08-24T23:11:21",
+        "price": 556.0,
+        "checked": "2026-08-26T22:25:31",
         "out": {
           "segs": [
             {
               "f": "SFO",
-              "ft": "2027-02-05 21:23",
-              "t": "JFK",
-              "tt": "2027-02-06 06:00",
-              "al": "American",
-              "fn": "AA 276"
+              "ft": "2027-02-05 21:15",
+              "t": "EWR",
+              "tt": "2027-02-06 05:53",
+              "al": "United",
+              "fn": "UA 2482"
             }
           ],
           "layovers": [],
           "stops": 0,
-          "duration": 337
+          "duration": 338
         },
         "ret": {
           "segs": [
             {
-              "f": "JFK",
-              "ft": "2027-02-07 16:50",
+              "f": "EWR",
+              "ft": "2027-02-07 13:00",
               "t": "SFO",
-              "tt": "2027-02-07 20:21",
-              "al": "American",
-              "fn": "AA 15"
+              "tt": "2027-02-07 16:11",
+              "al": "United",
+              "fn": "UA 1227"
             }
           ],
           "layovers": [],
           "stops": 0,
-          "duration": 391
+          "duration": 371
         },
         "link": "https://www.google.com/travel/flights?q=flights%20from%20SFO%20to%20New%20York%20on%202027-02-05%20returning%202027-02-07"
       },
@@ -1832,8 +1787,8 @@
       "radar_low": null,
       "samples": [],
       "confirmed": {
-        "price": 513.0,
-        "checked": "2026-08-24T23:11:29",
+        "price": 523.0,
+        "checked": "2026-08-26T22:25:42",
         "out": {
           "segs": [
             {
@@ -1874,8 +1829,8 @@
       "radar_low": null,
       "samples": [],
       "confirmed": {
-        "price": 411.0,
-        "checked": "2026-08-24T23:11:34",
+        "price": 401.0,
+        "checked": "2026-08-26T22:25:48",
         "out": {
           "segs": [
             {
@@ -1908,7 +1863,7 @@
         },
         "link": "https://www.google.com/travel/flights?q=flights%20from%20SFO%20to%20New%20York%20on%202027-02-19%20returning%202027-02-21"
       },
-      "confirmed_low": 411.0
+      "confirmed_low": 401.0
     },
     "2027-02-26": {
       "friday": "2027-02-26",
@@ -1917,7 +1872,7 @@
       "samples": [],
       "confirmed": {
         "price": 379.0,
-        "checked": "2026-08-24T23:11:38",
+        "checked": "2026-08-26T22:25:52",
         "out": {
           "segs": [
             {
@@ -2294,11 +2249,15 @@
         {
           "t": "2026-08-26T23:15:34",
           "radar": 494.0
+        },
+        {
+          "t": "2026-08-26T22:22:32",
+          "radar": 438.0
         }
       ],
       "confirmed": {
-        "price": 836.0,
-        "checked": "2026-08-24T23:11:43",
+        "price": 763.0,
+        "checked": "2026-08-26T22:25:57",
         "out": {
           "segs": [
             {
@@ -2318,20 +2277,33 @@
           "segs": [
             {
               "f": "SFO",
-              "ft": "2026-08-30 14:45",
+              "ft": "2026-08-30 12:23",
+              "t": "PHX",
+              "tt": "2026-08-30 14:35",
+              "al": "American",
+              "fn": "AA 2413"
+            },
+            {
+              "f": "PHX",
+              "ft": "2026-08-30 15:58",
               "t": "JFK",
-              "tt": "2026-08-30 23:30",
-              "al": "JetBlue",
-              "fn": "B6 416"
+              "tt": "2026-08-30 23:58",
+              "al": "American",
+              "fn": "AA 832"
             }
           ],
-          "layovers": [],
-          "stops": 0,
-          "duration": 345
+          "layovers": [
+            {
+              "id": "PHX",
+              "dur": 83
+            }
+          ],
+          "stops": 1,
+          "duration": 515
         },
         "link": "https://www.google.com/travel/flights?q=flights%20from%20New%20York%20to%20SFO%20on%202026-08-28%20returning%202026-08-30"
       },
-      "confirmed_low": 836.0
+      "confirmed_low": 763.0
     },
     "2026-09-04": {
       "friday": "2026-09-04",
@@ -2473,53 +2445,44 @@
         {
           "t": "2026-08-26T23:15:34",
           "radar": 445.0
+        },
+        {
+          "t": "2026-08-26T22:22:32",
+          "radar": 445.0
         }
       ],
       "confirmed": {
-        "price": 639.0,
-        "checked": "2026-08-24T23:11:48",
+        "price": 672.0,
+        "checked": "2026-08-26T22:26:02",
         "out": {
           "segs": [
             {
               "f": "JFK",
-              "ft": "2026-09-04 21:30",
+              "ft": "2026-09-04 20:55",
               "t": "SFO",
-              "tt": "2026-09-05 00:59",
-              "al": "American",
-              "fn": "AA 177"
+              "tt": "2026-09-05 00:36",
+              "al": "Delta",
+              "fn": "DL 1732"
             }
           ],
           "layovers": [],
           "stops": 0,
-          "duration": 389
+          "duration": 401
         },
         "ret": {
           "segs": [
             {
               "f": "SFO",
-              "ft": "2026-09-06 12:23",
-              "t": "PHX",
-              "tt": "2026-09-06 14:35",
-              "al": "American",
-              "fn": "AA 2413"
-            },
-            {
-              "f": "PHX",
-              "ft": "2026-09-06 15:58",
+              "ft": "2026-09-06 13:41",
               "t": "JFK",
-              "tt": "2026-09-06 23:58",
-              "al": "American",
-              "fn": "AA 832"
+              "tt": "2026-09-06 22:29",
+              "al": "Alaska",
+              "fn": "AS 42"
             }
           ],
-          "layovers": [
-            {
-              "id": "PHX",
-              "dur": 83
-            }
-          ],
-          "stops": 1,
-          "duration": 515
+          "layovers": [],
+          "stops": 0,
+          "duration": 348
         },
         "link": "https://www.google.com/travel/flights?q=flights%20from%20New%20York%20to%20SFO%20on%202026-09-04%20returning%202026-09-06"
       },
@@ -2531,46 +2494,46 @@
       "radar_low": null,
       "samples": [],
       "confirmed": {
-        "price": 585.0,
-        "checked": "2026-08-24T23:11:55",
+        "price": 503.0,
+        "checked": "2026-08-26T22:26:10",
         "out": {
           "segs": [
             {
               "f": "JFK",
-              "ft": "2026-09-11 21:30",
+              "ft": "2026-09-11 21:00",
               "t": "SFO",
-              "tt": "2026-09-12 00:59",
-              "al": "American",
-              "fn": "AA 177"
+              "tt": "2026-09-12 00:34",
+              "al": "Delta",
+              "fn": "DL 1732"
             }
           ],
           "layovers": [],
           "stops": 0,
-          "duration": 389
+          "duration": 394
         },
         "ret": {
           "segs": [
             {
               "f": "SFO",
-              "ft": "2026-09-13 12:41",
+              "ft": "2026-09-13 14:13",
               "t": "JFK",
-              "tt": "2026-09-13 21:30",
-              "al": "American",
-              "fn": "AA 166"
+              "tt": "2026-09-13 22:59",
+              "al": "JetBlue",
+              "fn": "B6 416"
             }
           ],
           "layovers": [],
           "stops": 0,
-          "duration": 349
+          "duration": 346
         },
         "link": "https://www.google.com/travel/flights?q=flights%20from%20New%20York%20to%20SFO%20on%202026-09-11%20returning%202026-09-13"
       },
-      "confirmed_low": 585.0
+      "confirmed_low": 503.0
     },
     "2026-09-18": {
       "friday": "2026-09-18",
       "sunday": "2026-09-20",
-      "radar_low": 378.0,
+      "radar_low": 375.0,
       "samples": [
         {
           "t": "2026-08-24T23:08:31",
@@ -2739,40 +2702,44 @@
         {
           "t": "2026-08-26T23:15:34",
           "radar": 378.0
+        },
+        {
+          "t": "2026-08-26T22:22:32",
+          "radar": 375.0
         }
       ],
       "confirmed": {
-        "price": 592.0,
-        "checked": "2026-08-24T23:12:03",
+        "price": 647.0,
+        "checked": "2026-08-26T22:26:15",
         "out": {
           "segs": [
             {
               "f": "JFK",
-              "ft": "2026-09-18 21:00",
+              "ft": "2026-09-18 21:30",
               "t": "SFO",
-              "tt": "2026-09-19 00:34",
-              "al": "Delta",
-              "fn": "DL 1732"
+              "tt": "2026-09-19 00:59",
+              "al": "American",
+              "fn": "AA 177"
             }
           ],
           "layovers": [],
           "stops": 0,
-          "duration": 394
+          "duration": 389
         },
         "ret": {
           "segs": [
             {
               "f": "SFO",
-              "ft": "2026-09-20 13:15",
+              "ft": "2026-09-20 15:10",
               "t": "JFK",
-              "tt": "2026-09-20 21:55",
-              "al": "Delta",
-              "fn": "DL 631"
+              "tt": "2026-09-20 23:59",
+              "al": "American",
+              "fn": "AA 148"
             }
           ],
           "layovers": [],
           "stops": 0,
-          "duration": 340
+          "duration": 349
         },
         "link": "https://www.google.com/travel/flights?q=flights%20from%20New%20York%20to%20SFO%20on%202026-09-18%20returning%202026-09-20"
       },
@@ -2784,8 +2751,8 @@
       "radar_low": null,
       "samples": [],
       "confirmed": {
-        "price": 640.0,
-        "checked": "2026-08-24T23:12:09",
+        "price": 647.0,
+        "checked": "2026-08-26T22:26:20",
         "out": {
           "segs": [
             {
@@ -2864,44 +2831,48 @@
         {
           "t": "2026-08-26T23:15:34",
           "radar": 317.0
+        },
+        {
+          "t": "2026-08-26T22:22:32",
+          "radar": 317.0
         }
       ],
       "confirmed": {
-        "price": 615.0,
-        "checked": "2026-08-24T23:12:14",
+        "price": 592.0,
+        "checked": "2026-08-26T22:26:25",
         "out": {
           "segs": [
             {
               "f": "JFK",
-              "ft": "2026-10-02 21:30",
+              "ft": "2026-10-02 21:00",
               "t": "SFO",
-              "tt": "2026-10-03 00:59",
-              "al": "American",
-              "fn": "AA 177"
+              "tt": "2026-10-03 00:34",
+              "al": "Delta",
+              "fn": "DL 1732"
             }
           ],
           "layovers": [],
           "stops": 0,
-          "duration": 389
+          "duration": 394
         },
         "ret": {
           "segs": [
             {
               "f": "SFO",
-              "ft": "2026-10-04 12:41",
+              "ft": "2026-10-04 16:05",
               "t": "JFK",
-              "tt": "2026-10-04 21:30",
-              "al": "American",
-              "fn": "AA 166"
+              "tt": "2026-10-05 00:35",
+              "al": "Delta",
+              "fn": "DL 363"
             }
           ],
           "layovers": [],
           "stops": 0,
-          "duration": 349
+          "duration": 330
         },
         "link": "https://www.google.com/travel/flights?q=flights%20from%20New%20York%20to%20SFO%20on%202026-10-02%20returning%202026-10-04"
       },
-      "confirmed_low": 615.0
+      "confirmed_low": 592.0
     },
     "2026-10-09": {
       "friday": "2026-10-09",
@@ -2909,41 +2880,41 @@
       "radar_low": null,
       "samples": [],
       "confirmed": {
-        "price": 647.0,
-        "checked": "2026-08-24T23:12:23",
+        "price": 601.0,
+        "checked": "2026-08-26T22:26:29",
         "out": {
           "segs": [
             {
               "f": "JFK",
-              "ft": "2026-10-09 20:55",
+              "ft": "2026-10-09 21:25",
               "t": "SFO",
-              "tt": "2026-10-10 00:32",
-              "al": "Delta",
-              "fn": "DL 1732"
+              "tt": "2026-10-10 01:07",
+              "al": "American",
+              "fn": "AA 177"
             }
           ],
           "layovers": [],
           "stops": 0,
-          "duration": 397
+          "duration": 402
         },
         "ret": {
           "segs": [
             {
               "f": "SFO",
-              "ft": "2026-10-11 13:50",
+              "ft": "2026-10-11 13:43",
               "t": "JFK",
-              "tt": "2026-10-11 22:19",
-              "al": "Delta",
-              "fn": "DL 630"
+              "tt": "2026-10-11 22:29",
+              "al": "Alaska",
+              "fn": "AS 42"
             }
           ],
           "layovers": [],
           "stops": 0,
-          "duration": 329
+          "duration": 346
         },
         "link": "https://www.google.com/travel/flights?q=flights%20from%20New%20York%20to%20SFO%20on%202026-10-09%20returning%202026-10-11"
       },
-      "confirmed_low": 647.0
+      "confirmed_low": 601.0
     },
     "2026-10-16": {
       "friday": "2026-10-16",
@@ -2951,8 +2922,8 @@
       "radar_low": null,
       "samples": [],
       "confirmed": {
-        "price": 533.0,
-        "checked": "2026-08-24T23:12:27",
+        "price": 648.0,
+        "checked": "2026-08-26T22:26:34",
         "out": {
           "segs": [
             {
@@ -2972,16 +2943,16 @@
           "segs": [
             {
               "f": "SFO",
-              "ft": "2026-10-18 16:15",
+              "ft": "2026-10-18 15:28",
               "t": "JFK",
-              "tt": "2026-10-19 00:35",
-              "al": "Delta",
-              "fn": "DL 363"
+              "tt": "2026-10-18 23:59",
+              "al": "American",
+              "fn": "AA 148"
             }
           ],
           "layovers": [],
           "stops": 0,
-          "duration": 320
+          "duration": 331
         },
         "link": "https://www.google.com/travel/flights?q=flights%20from%20New%20York%20to%20SFO%20on%202026-10-16%20returning%202026-10-18"
       },
@@ -2993,8 +2964,8 @@
       "radar_low": null,
       "samples": [],
       "confirmed": {
-        "price": 493.0,
-        "checked": "2026-08-24T23:12:32",
+        "price": 550.0,
+        "checked": "2026-08-26T22:26:38",
         "out": {
           "segs": [
             {
@@ -3014,11 +2985,11 @@
           "segs": [
             {
               "f": "SFO",
-              "ft": "2026-10-25 16:25",
+              "ft": "2026-10-25 14:00",
               "t": "JFK",
-              "tt": "2026-10-26 00:56",
-              "al": "JetBlue",
-              "fn": "B6 816"
+              "tt": "2026-10-25 22:31",
+              "al": "American",
+              "fn": "AA 166"
             }
           ],
           "layovers": [],
@@ -3035,37 +3006,37 @@
       "radar_low": null,
       "samples": [],
       "confirmed": {
-        "price": 357.0,
-        "checked": "2026-08-24T23:12:36",
+        "price": 377.0,
+        "checked": "2026-08-26T22:26:43",
         "out": {
           "segs": [
             {
               "f": "JFK",
-              "ft": "2026-10-30 21:30",
+              "ft": "2026-10-30 20:15",
               "t": "SFO",
-              "tt": "2026-10-31 01:12",
-              "al": "American",
-              "fn": "AA 177"
+              "tt": "2026-10-30 23:58",
+              "al": "JetBlue",
+              "fn": "B6 515"
             }
           ],
           "layovers": [],
           "stops": 0,
-          "duration": 402
+          "duration": 403
         },
         "ret": {
           "segs": [
             {
               "f": "SFO",
-              "ft": "2026-11-01 15:32",
+              "ft": "2026-11-01 14:55",
               "t": "JFK",
-              "tt": "2026-11-01 23:59",
-              "al": "American",
-              "fn": "AA 148"
+              "tt": "2026-11-01 23:25",
+              "al": "JetBlue",
+              "fn": "B6 416"
             }
           ],
           "layovers": [],
           "stops": 0,
-          "duration": 327
+          "duration": 330
         },
         "link": "https://www.google.com/travel/flights?q=flights%20from%20New%20York%20to%20SFO%20on%202026-10-30%20returning%202026-11-01"
       },
@@ -3077,8 +3048,8 @@
       "radar_low": null,
       "samples": [],
       "confirmed": {
-        "price": 397.0,
-        "checked": "2026-08-24T23:12:41",
+        "price": 432.0,
+        "checked": "2026-08-26T22:26:53",
         "out": {
           "segs": [
             {
@@ -3119,41 +3090,41 @@
       "radar_low": null,
       "samples": [],
       "confirmed": {
-        "price": 397.0,
-        "checked": "2026-08-24T23:12:47",
+        "price": 377.0,
+        "checked": "2026-08-26T22:26:58",
         "out": {
           "segs": [
             {
-              "f": "EWR",
-              "ft": "2026-11-13 20:20",
+              "f": "JFK",
+              "ft": "2026-11-13 20:15",
               "t": "SFO",
-              "tt": "2026-11-13 23:57",
-              "al": "United",
-              "fn": "UA 1800"
+              "tt": "2026-11-13 23:58",
+              "al": "JetBlue",
+              "fn": "B6 515"
             }
           ],
           "layovers": [],
           "stops": 0,
-          "duration": 397
+          "duration": 403
         },
         "ret": {
           "segs": [
             {
               "f": "SFO",
-              "ft": "2026-11-15 16:30",
-              "t": "EWR",
-              "tt": "2026-11-16 00:59",
-              "al": "United",
-              "fn": "UA 1149"
+              "ft": "2026-11-15 14:35",
+              "t": "JFK",
+              "tt": "2026-11-15 22:56",
+              "al": "JetBlue",
+              "fn": "B6 416"
             }
           ],
           "layovers": [],
           "stops": 0,
-          "duration": 329
+          "duration": 321
         },
         "link": "https://www.google.com/travel/flights?q=flights%20from%20New%20York%20to%20SFO%20on%202026-11-13%20returning%202026-11-15"
       },
-      "confirmed_low": 397.0
+      "confirmed_low": 377.0
     },
     "2026-11-20": {
       "friday": "2026-11-20",
@@ -3161,41 +3132,41 @@
       "radar_low": null,
       "samples": [],
       "confirmed": {
-        "price": 655.0,
-        "checked": "2026-08-24T23:12:52",
+        "price": 473.0,
+        "checked": "2026-08-26T22:27:02",
         "out": {
           "segs": [
             {
               "f": "JFK",
-              "ft": "2026-11-20 20:18",
+              "ft": "2026-11-20 21:00",
               "t": "SFO",
-              "tt": "2026-11-20 23:59",
-              "al": "Alaska",
-              "fn": "AS 39"
+              "tt": "2026-11-21 00:47",
+              "al": "American",
+              "fn": "AA 177"
             }
           ],
           "layovers": [],
           "stops": 0,
-          "duration": 401
+          "duration": 407
         },
         "ret": {
           "segs": [
             {
               "f": "SFO",
-              "ft": "2026-11-22 13:51",
+              "ft": "2026-11-22 15:33",
               "t": "JFK",
-              "tt": "2026-11-22 22:29",
-              "al": "Alaska",
-              "fn": "AS 32"
+              "tt": "2026-11-22 23:59",
+              "al": "American",
+              "fn": "AA 148"
             }
           ],
           "layovers": [],
           "stops": 0,
-          "duration": 338
+          "duration": 326
         },
         "link": "https://www.google.com/travel/flights?q=flights%20from%20New%20York%20to%20SFO%20on%202026-11-20%20returning%202026-11-22"
       },
-      "confirmed_low": 655.0
+      "confirmed_low": 473.0
     },
     "2026-11-27": {
       "friday": "2026-11-27",
@@ -3203,8 +3174,8 @@
       "radar_low": null,
       "samples": [],
       "confirmed": {
-        "price": 1046.0,
-        "checked": "2026-08-24T23:12:57",
+        "price": 1063.0,
+        "checked": "2026-08-26T22:27:09",
         "out": {
           "segs": [
             {
@@ -3246,7 +3217,7 @@
       "samples": [],
       "confirmed": {
         "price": 543.0,
-        "checked": "2026-08-24T23:13:06",
+        "checked": "2026-08-26T22:27:13",
         "out": {
           "segs": [
             {
@@ -3288,7 +3259,7 @@
       "samples": [],
       "confirmed": {
         "price": 413.0,
-        "checked": "2026-08-24T23:13:12",
+        "checked": "2026-08-26T22:27:18",
         "out": {
           "segs": [
             {
@@ -3329,8 +3300,8 @@
       "radar_low": null,
       "samples": [],
       "confirmed": {
-        "price": 743.0,
-        "checked": "2026-08-24T23:13:16",
+        "price": 920.0,
+        "checked": "2026-08-26T22:27:23",
         "out": {
           "segs": [
             {
@@ -3350,16 +3321,16 @@
           "segs": [
             {
               "f": "SFO",
-              "ft": "2026-12-20 16:01",
+              "ft": "2026-12-20 15:25",
               "t": "JFK",
-              "tt": "2026-12-21 00:30",
-              "al": "American",
-              "fn": "AA 148"
+              "tt": "2026-12-20 23:55",
+              "al": "JetBlue",
+              "fn": "B6 16"
             }
           ],
           "layovers": [],
           "stops": 0,
-          "duration": 329
+          "duration": 330
         },
         "link": "https://www.google.com/travel/flights?q=flights%20from%20New%20York%20to%20SFO%20on%202026-12-18%20returning%202026-12-20"
       },
@@ -3371,8 +3342,8 @@
       "radar_low": null,
       "samples": [],
       "confirmed": {
-        "price": 771.0,
-        "checked": "2026-08-24T23:13:22",
+        "price": 731.0,
+        "checked": "2026-08-26T22:27:31",
         "out": {
           "segs": [
             {
@@ -3405,7 +3376,7 @@
         },
         "link": "https://www.google.com/travel/flights?q=flights%20from%20New%20York%20to%20SFO%20on%202026-12-25%20returning%202026-12-27"
       },
-      "confirmed_low": 771.0
+      "confirmed_low": 731.0
     },
     "2027-01-01": {
       "friday": "2027-01-01",
@@ -3413,8 +3384,8 @@
       "radar_low": null,
       "samples": [],
       "confirmed": {
-        "price": 970.0,
-        "checked": "2026-08-24T23:13:27",
+        "price": 943.0,
+        "checked": "2026-08-26T22:27:41",
         "out": {
           "segs": [
             {
@@ -3434,20 +3405,20 @@
           "segs": [
             {
               "f": "SFO",
-              "ft": "2027-01-03 13:50",
+              "ft": "2027-01-03 12:56",
               "t": "JFK",
-              "tt": "2027-01-03 22:29",
-              "al": "Alaska",
-              "fn": "AS 32"
+              "tt": "2027-01-03 21:25",
+              "al": "American",
+              "fn": "AA 166"
             }
           ],
           "layovers": [],
           "stops": 0,
-          "duration": 339
+          "duration": 329
         },
         "link": "https://www.google.com/travel/flights?q=flights%20from%20New%20York%20to%20SFO%20on%202027-01-01%20returning%202027-01-03"
       },
-      "confirmed_low": 970.0
+      "confirmed_low": 943.0
     },
     "2027-01-08": {
       "friday": "2027-01-08",
@@ -3456,36 +3427,36 @@
       "samples": [],
       "confirmed": {
         "price": 379.0,
-        "checked": "2026-08-24T23:13:32",
+        "checked": "2026-08-26T22:27:46",
         "out": {
           "segs": [
             {
-              "f": "JFK",
-              "ft": "2027-01-08 21:05",
+              "f": "EWR",
+              "ft": "2027-01-08 20:15",
               "t": "SFO",
-              "tt": "2027-01-09 00:43",
-              "al": "American",
-              "fn": "AA 177"
+              "tt": "2027-01-08 23:51",
+              "al": "United",
+              "fn": "UA 1800"
             }
           ],
           "layovers": [],
           "stops": 0,
-          "duration": 398
+          "duration": 396
         },
         "ret": {
           "segs": [
             {
               "f": "SFO",
-              "ft": "2027-01-10 15:09",
-              "t": "JFK",
-              "tt": "2027-01-10 23:50",
-              "al": "American",
-              "fn": "AA 2429"
+              "ft": "2027-01-10 16:50",
+              "t": "EWR",
+              "tt": "2027-01-11 01:36",
+              "al": "United",
+              "fn": "UA 1149"
             }
           ],
           "layovers": [],
           "stops": 0,
-          "duration": 341
+          "duration": 346
         },
         "link": "https://www.google.com/travel/flights?q=flights%20from%20New%20York%20to%20SFO%20on%202027-01-08%20returning%202027-01-10"
       },
@@ -3497,37 +3468,37 @@
       "radar_low": null,
       "samples": [],
       "confirmed": {
-        "price": 379.0,
-        "checked": "2026-08-24T23:13:36",
+        "price": 453.0,
+        "checked": "2026-08-26T22:27:50",
         "out": {
           "segs": [
             {
               "f": "JFK",
-              "ft": "2027-01-15 21:05",
+              "ft": "2027-01-15 20:40",
               "t": "SFO",
-              "tt": "2027-01-16 00:43",
-              "al": "American",
-              "fn": "AA 177"
+              "tt": "2027-01-16 00:22",
+              "al": "JetBlue",
+              "fn": "B6 2615"
             }
           ],
           "layovers": [],
           "stops": 0,
-          "duration": 398
+          "duration": 402
         },
         "ret": {
           "segs": [
             {
               "f": "SFO",
-              "ft": "2027-01-17 15:09",
+              "ft": "2027-01-17 15:05",
               "t": "JFK",
-              "tt": "2027-01-17 23:50",
-              "al": "American",
-              "fn": "AA 148"
+              "tt": "2027-01-17 23:34",
+              "al": "JetBlue",
+              "fn": "B6 1216"
             }
           ],
           "layovers": [],
           "stops": 0,
-          "duration": 341
+          "duration": 329
         },
         "link": "https://www.google.com/travel/flights?q=flights%20from%20New%20York%20to%20SFO%20on%202027-01-15%20returning%202027-01-17"
       },
@@ -3540,7 +3511,7 @@
       "samples": [],
       "confirmed": {
         "price": 379.0,
-        "checked": "2026-08-24T23:13:41",
+        "checked": "2026-08-26T22:27:55",
         "out": {
           "segs": [
             {
@@ -3582,7 +3553,7 @@
       "samples": [],
       "confirmed": {
         "price": 379.0,
-        "checked": "2026-08-24T23:13:46",
+        "checked": "2026-08-26T22:28:00",
         "out": {
           "segs": [
             {
@@ -3624,7 +3595,7 @@
       "samples": [],
       "confirmed": {
         "price": 379.0,
-        "checked": "2026-08-24T23:13:51",
+        "checked": "2026-08-26T22:28:06",
         "out": {
           "segs": [
             {
@@ -3665,8 +3636,8 @@
       "radar_low": null,
       "samples": [],
       "confirmed": {
-        "price": 550.0,
-        "checked": "2026-08-24T23:13:55",
+        "price": 563.0,
+        "checked": "2026-08-26T22:28:12",
         "out": {
           "segs": [
             {
@@ -3707,8 +3678,8 @@
       "radar_low": null,
       "samples": [],
       "confirmed": {
-        "price": 503.0,
-        "checked": "2026-08-24T23:14:00",
+        "price": 466.0,
+        "checked": "2026-08-26T22:28:17",
         "out": {
           "segs": [
             {
@@ -3741,7 +3712,7 @@
         },
         "link": "https://www.google.com/travel/flights?q=flights%20from%20New%20York%20to%20SFO%20on%202027-02-19%20returning%202027-02-21"
       },
-      "confirmed_low": 503.0
+      "confirmed_low": 466.0
     },
     "2027-02-26": {
       "friday": "2027-02-26",
@@ -3750,7 +3721,7 @@
       "samples": [],
       "confirmed": {
         "price": 379.0,
-        "checked": "2026-08-24T23:14:04",
+        "checked": "2026-08-26T22:28:23",
         "out": {
           "segs": [
             {
@@ -3988,6 +3959,6 @@
   },
   "_meta": {
     "date": "2026-08-26",
-    "events": 5
+    "events": 59
   }
 }
