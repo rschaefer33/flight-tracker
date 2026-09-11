@@ -1333,6 +1333,10 @@
         {
           "t": "2026-09-10T22:24:44",
           "radar": 498.0
+        },
+        {
+          "t": "2026-09-11T00:54:24",
+          "radar": 498.0
         }
       ],
       "confirmed": null,
@@ -3493,6 +3497,14 @@
       "samples": [],
       "confirmed": null,
       "confirmed_low": null
+    },
+    "2027-09-10": {
+      "friday": "2027-09-10",
+      "sunday": "2027-09-12",
+      "radar_low": null,
+      "samples": [],
+      "confirmed": null,
+      "confirmed_low": null
     }
   },
   "reverse": {
@@ -4702,6 +4714,10 @@
         {
           "t": "2026-09-10T22:24:44",
           "radar": 461.0
+        },
+        {
+          "t": "2026-09-11T00:54:24",
+          "radar": 461.0
         }
       ],
       "confirmed": {
@@ -4884,6 +4900,10 @@
         },
         {
           "t": "2026-09-10T22:24:44",
+          "radar": 373.0
+        },
+        {
+          "t": "2026-09-11T00:54:24",
           "radar": 373.0
         }
       ],
@@ -5426,6 +5446,10 @@
         },
         {
           "t": "2026-09-10T22:24:44",
+          "radar": 403.0
+        },
+        {
+          "t": "2026-09-11T00:54:24",
           "radar": 403.0
         }
       ],
@@ -6690,10 +6714,18 @@
       "samples": [],
       "confirmed": null,
       "confirmed_low": null
+    },
+    "2027-09-10": {
+      "friday": "2027-09-10",
+      "sunday": "2027-09-12",
+      "radar_low": null,
+      "samples": [],
+      "confirmed": null,
+      "confirmed_low": null
     }
   },
   "_meta": {
-    "date": "2026-09-10",
-    "events": 5
+    "date": "2026-09-11",
+    "events": 3
   }
 }
