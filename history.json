@@ -3032,6 +3032,10 @@
         {
           "t": "2026-10-01T20:56:58",
           "radar": 452.0
+        },
+        {
+          "t": "2026-10-02T00:40:02",
+          "radar": 452.0
         }
       ],
       "confirmed": {
@@ -4246,6 +4250,10 @@
         {
           "t": "2026-10-01T20:56:58",
           "radar": 651.0
+        },
+        {
+          "t": "2026-10-02T00:40:02",
+          "radar": 651.0
         }
       ],
       "confirmed": {
@@ -4481,6 +4489,10 @@
         },
         {
           "t": "2026-10-01T20:56:58",
+          "radar": 562.0
+        },
+        {
+          "t": "2026-10-02T00:40:02",
           "radar": 562.0
         }
       ],
@@ -5311,6 +5323,14 @@
     "2027-09-24": {
       "friday": "2027-09-24",
       "sunday": "2027-09-26",
+      "radar_low": null,
+      "samples": [],
+      "confirmed": null,
+      "confirmed_low": null
+    },
+    "2027-10-01": {
+      "friday": "2027-10-01",
+      "sunday": "2027-10-03",
       "radar_low": null,
       "samples": [],
       "confirmed": null,
@@ -8345,6 +8365,10 @@
         {
           "t": "2026-10-01T20:56:58",
           "radar": 517.0
+        },
+        {
+          "t": "2026-10-02T00:40:02",
+          "radar": 517.0
         }
       ],
       "confirmed": {
@@ -9145,6 +9169,10 @@
         {
           "t": "2026-10-01T20:56:58",
           "radar": 426.0
+        },
+        {
+          "t": "2026-10-02T00:40:02",
+          "radar": 426.0
         }
       ],
       "confirmed": {
@@ -9604,6 +9632,10 @@
         {
           "t": "2026-10-01T20:56:58",
           "radar": 481.0
+        },
+        {
+          "t": "2026-10-02T00:40:02",
+          "radar": 481.0
         }
       ],
       "confirmed": {
@@ -9847,6 +9879,10 @@
         {
           "t": "2026-10-01T20:56:58",
           "radar": 543.0
+        },
+        {
+          "t": "2026-10-02T00:40:02",
+          "radar": 543.0
         }
       ],
       "confirmed": {
@@ -9997,37 +10033,37 @@
       "radar_low": null,
       "samples": [],
       "confirmed": {
-        "price": 453.0,
-        "checked": "2026-08-26T22:27:50",
+        "price": 417.0,
+        "checked": "2026-10-02T00:40:30",
         "out": {
           "segs": [
             {
-              "f": "JFK",
-              "ft": "2027-01-15 20:40",
+              "f": "EWR",
+              "ft": "2027-01-15 20:15",
               "t": "SFO",
-              "tt": "2027-01-16 00:22",
-              "al": "JetBlue",
-              "fn": "B6 2615"
+              "tt": "2027-01-15 23:59",
+              "al": "United",
+              "fn": "UA 1800"
             }
           ],
           "layovers": [],
           "stops": 0,
-          "duration": 402
+          "duration": 404
         },
         "ret": {
           "segs": [
             {
               "f": "SFO",
-              "ft": "2027-01-17 15:05",
-              "t": "JFK",
-              "tt": "2027-01-17 23:34",
-              "al": "JetBlue",
-              "fn": "B6 1216"
+              "ft": "2027-01-17 15:25",
+              "t": "EWR",
+              "tt": "2027-01-17 23:55",
+              "al": "United",
+              "fn": "UA 2225"
             }
           ],
           "layovers": [],
           "stops": 0,
-          "duration": 329
+          "duration": 330
         },
         "link": "https://www.google.com/travel/flights?q=flights%20from%20New%20York%20to%20SFO%20on%202027-01-15%20returning%202027-01-17"
       },
@@ -10039,22 +10075,22 @@
       "radar_low": null,
       "samples": [],
       "confirmed": {
-        "price": 379.0,
-        "checked": "2026-08-26T22:27:55",
+        "price": 417.0,
+        "checked": "2026-10-02T00:40:40",
         "out": {
           "segs": [
             {
               "f": "EWR",
               "ft": "2027-01-22 20:15",
               "t": "SFO",
-              "tt": "2027-01-22 23:51",
+              "tt": "2027-01-22 23:59",
               "al": "United",
               "fn": "UA 1800"
             }
           ],
           "layovers": [],
           "stops": 0,
-          "duration": 396
+          "duration": 404
         },
         "ret": {
           "segs": [
@@ -10062,14 +10098,14 @@
               "f": "SFO",
               "ft": "2027-01-24 16:50",
               "t": "EWR",
-              "tt": "2027-01-25 01:36",
+              "tt": "2027-01-25 01:18",
               "al": "United",
               "fn": "UA 1149"
             }
           ],
           "layovers": [],
           "stops": 0,
-          "duration": 346
+          "duration": 328
         },
         "link": "https://www.google.com/travel/flights?q=flights%20from%20New%20York%20to%20SFO%20on%202027-01-22%20returning%202027-01-24"
       },
@@ -10081,37 +10117,37 @@
       "radar_low": null,
       "samples": [],
       "confirmed": {
-        "price": 379.0,
-        "checked": "2026-08-26T22:28:00",
+        "price": 417.0,
+        "checked": "2026-10-02T00:40:50",
         "out": {
           "segs": [
             {
-              "f": "JFK",
-              "ft": "2027-01-29 21:05",
+              "f": "EWR",
+              "ft": "2027-01-29 20:15",
               "t": "SFO",
-              "tt": "2027-01-30 00:43",
-              "al": "American",
-              "fn": "AA 177"
+              "tt": "2027-01-29 23:59",
+              "al": "United",
+              "fn": "UA 1800"
             }
           ],
           "layovers": [],
           "stops": 0,
-          "duration": 398
+          "duration": 404
         },
         "ret": {
           "segs": [
             {
               "f": "SFO",
-              "ft": "2027-01-31 15:09",
-              "t": "JFK",
-              "tt": "2027-01-31 23:50",
-              "al": "American",
-              "fn": "AA 148"
+              "ft": "2027-01-31 16:50",
+              "t": "EWR",
+              "tt": "2027-02-01 01:20",
+              "al": "United",
+              "fn": "UA 1149"
             }
           ],
           "layovers": [],
           "stops": 0,
-          "duration": 341
+          "duration": 330
         },
         "link": "https://www.google.com/travel/flights?q=flights%20from%20New%20York%20to%20SFO%20on%202027-01-29%20returning%202027-01-31"
       },
@@ -10524,10 +10560,18 @@
       "samples": [],
       "confirmed": null,
       "confirmed_low": null
+    },
+    "2027-10-01": {
+      "friday": "2027-10-01",
+      "sunday": "2027-10-03",
+      "radar_low": null,
+      "samples": [],
+      "confirmed": null,
+      "confirmed_low": null
     }
   },
   "_meta": {
-    "date": "2026-10-01",
-    "events": 5
+    "date": "2026-10-02",
+    "events": 3
   }
 }
