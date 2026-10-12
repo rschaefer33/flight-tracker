@@ -3139,37 +3139,50 @@
         }
       ],
       "confirmed": {
-        "price": 1204.0,
-        "checked": "2026-10-03T10:20:56",
+        "price": 858.0,
+        "checked": "2026-10-12T01:09:37",
         "out": {
           "segs": [
             {
               "f": "SFO",
-              "ft": "2026-10-16 22:45",
-              "t": "EWR",
-              "tt": "2026-10-17 07:23",
-              "al": "United",
-              "fn": "UA 1141"
+              "ft": "2026-10-16 22:23",
+              "t": "JFK",
+              "tt": "2026-10-17 07:04",
+              "al": "Alaska",
+              "fn": "AS 40"
             }
           ],
           "layovers": [],
           "stops": 0,
-          "duration": 338
+          "duration": 341
         },
         "ret": {
           "segs": [
             {
-              "f": "EWR",
-              "ft": "2026-10-18 13:20",
+              "f": "JFK",
+              "ft": "2026-10-18 17:20",
+              "t": "PDX",
+              "tt": "2026-10-18 20:34",
+              "al": "Alaska",
+              "fn": "AS 335"
+            },
+            {
+              "f": "PDX",
+              "ft": "2026-10-18 21:33",
               "t": "SFO",
-              "tt": "2026-10-18 16:19",
-              "al": "United",
-              "fn": "UA 1227"
+              "tt": "2026-10-18 23:26",
+              "al": "Alaska",
+              "fn": "AS 697"
             }
           ],
-          "layovers": [],
-          "stops": 0,
-          "duration": 359
+          "layovers": [
+            {
+              "id": "PDX",
+              "dur": 59
+            }
+          ],
+          "stops": 1,
+          "duration": 546
         },
         "link": "https://www.google.com/travel/flights?q=flights%20from%20SFO%20to%20New%20York%20on%202026-10-16%20returning%202026-10-18"
       },
@@ -3577,6 +3590,10 @@
         },
         {
           "t": "2026-10-11T21:49:28",
+          "radar": 413.0
+        },
+        {
+          "t": "2026-10-12T01:08:58",
           "radar": 413.0
         }
       ],
@@ -9223,6 +9240,10 @@
         {
           "t": "2026-10-11T21:49:28",
           "radar": 478.0
+        },
+        {
+          "t": "2026-10-12T01:08:58",
+          "radar": 478.0
         }
       ],
       "confirmed": {
@@ -9580,6 +9601,10 @@
         },
         {
           "t": "2026-10-11T21:49:28",
+          "radar": 348.0
+        },
+        {
+          "t": "2026-10-12T01:08:58",
           "radar": 348.0
         }
       ],
@@ -11045,37 +11070,37 @@
       "radar_low": null,
       "samples": [],
       "confirmed": {
-        "price": 592.0,
-        "checked": "2026-10-03T04:59:19",
+        "price": 593.0,
+        "checked": "2026-10-12T01:09:27",
         "out": {
           "segs": [
             {
               "f": "JFK",
-              "ft": "2027-02-19 21:05",
+              "ft": "2027-02-19 21:11",
               "t": "SFO",
-              "tt": "2027-02-20 00:43",
+              "tt": "2027-02-20 00:57",
               "al": "American",
               "fn": "AA 177"
             }
           ],
           "layovers": [],
           "stops": 0,
-          "duration": 398
+          "duration": 406
         },
         "ret": {
           "segs": [
             {
               "f": "SFO",
-              "ft": "2027-02-21 15:09",
+              "ft": "2027-02-21 13:39",
               "t": "JFK",
-              "tt": "2027-02-21 23:50",
+              "tt": "2027-02-21 22:05",
               "al": "American",
-              "fn": "AA 148"
+              "fn": "AA 166"
             }
           ],
           "layovers": [],
           "stops": 0,
-          "duration": 341
+          "duration": 326
         },
         "link": "https://www.google.com/travel/flights?q=flights%20from%20New%20York%20to%20SFO%20on%202027-02-19%20returning%202027-02-21"
       },
@@ -11088,36 +11113,36 @@
       "samples": [],
       "confirmed": {
         "price": 417.0,
-        "checked": "2026-10-03T04:59:31",
+        "checked": "2026-10-12T01:09:32",
         "out": {
           "segs": [
             {
               "f": "JFK",
-              "ft": "2027-02-26 21:05",
+              "ft": "2027-02-26 21:11",
               "t": "SFO",
-              "tt": "2027-02-27 00:43",
+              "tt": "2027-02-27 00:57",
               "al": "American",
               "fn": "AA 177"
             }
           ],
           "layovers": [],
           "stops": 0,
-          "duration": 398
+          "duration": 406
         },
         "ret": {
           "segs": [
             {
               "f": "SFO",
-              "ft": "2027-02-28 15:09",
+              "ft": "2027-02-28 13:39",
               "t": "JFK",
-              "tt": "2027-02-28 23:50",
+              "tt": "2027-02-28 22:05",
               "al": "American",
-              "fn": "AA 148"
+              "fn": "AA 166"
             }
           ],
           "layovers": [],
           "stops": 0,
-          "duration": 341
+          "duration": 326
         },
         "link": "https://www.google.com/travel/flights?q=flights%20from%20New%20York%20to%20SFO%20on%202027-02-26%20returning%202027-02-28"
       },
@@ -11381,7 +11406,7 @@
     }
   },
   "_meta": {
-    "date": "2026-10-11",
-    "events": 5
+    "date": "2026-10-12",
+    "events": 3
   }
 }
