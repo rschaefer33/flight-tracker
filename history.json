@@ -3603,6 +3603,10 @@
         {
           "t": "2026-10-12T18:56:17",
           "radar": 413.0
+        },
+        {
+          "t": "2026-10-13T01:14:23",
+          "radar": 413.0
         }
       ],
       "confirmed": {
@@ -3696,6 +3700,10 @@
         {
           "t": "2026-10-12T18:56:17",
           "radar": 425.0
+        },
+        {
+          "t": "2026-10-13T01:14:23",
+          "radar": 409.0
         }
       ],
       "confirmed": {
@@ -3940,37 +3948,50 @@
       "radar_low": null,
       "samples": [],
       "confirmed": {
-        "price": 718.0,
-        "checked": "2026-10-04T02:30:24",
+        "price": 783.0,
+        "checked": "2026-10-13T01:14:59",
         "out": {
           "segs": [
             {
               "f": "SFO",
-              "ft": "2026-11-20 23:12",
+              "ft": "2026-11-20 23:30",
               "t": "JFK",
-              "tt": "2026-11-21 07:52",
-              "al": "Alaska",
-              "fn": "AS 40"
+              "tt": "2026-11-21 08:00",
+              "al": "JetBlue",
+              "fn": "B6 616"
             }
           ],
           "layovers": [],
           "stops": 0,
-          "duration": 340
+          "duration": 330
         },
         "ret": {
           "segs": [
             {
               "f": "JFK",
-              "ft": "2026-11-22 21:35",
+              "ft": "2026-11-22 18:30",
+              "t": "BOS",
+              "tt": "2026-11-22 19:50",
+              "al": "JetBlue",
+              "fn": "B6 518"
+            },
+            {
+              "f": "BOS",
+              "ft": "2026-11-22 20:59",
               "t": "SFO",
-              "tt": "2026-11-23 01:12",
-              "al": "Delta",
-              "fn": "DL 1732"
+              "tt": "2026-11-23 00:44",
+              "al": "JetBlue",
+              "fn": "B6 733"
             }
           ],
-          "layovers": [],
-          "stops": 0,
-          "duration": 397
+          "layovers": [
+            {
+              "id": "BOS",
+              "dur": 69
+            }
+          ],
+          "stops": 1,
+          "duration": 554
         },
         "link": "https://www.google.com/travel/flights?q=flights%20from%20SFO%20to%20New%20York%20on%202026-11-20%20returning%202026-11-22"
       },
@@ -3982,37 +4003,50 @@
       "radar_low": null,
       "samples": [],
       "confirmed": {
-        "price": 912.0,
-        "checked": "2026-10-04T09:35:03",
+        "price": 984.0,
+        "checked": "2026-10-13T01:15:05",
         "out": {
           "segs": [
             {
               "f": "SFO",
-              "ft": "2026-11-27 22:00",
-              "t": "JFK",
-              "tt": "2026-11-28 06:29",
-              "al": "American",
-              "fn": "AA 276"
+              "ft": "2026-11-27 21:30",
+              "t": "EWR",
+              "tt": "2026-11-28 05:57",
+              "al": "United",
+              "fn": "UA 2482"
             }
           ],
           "layovers": [],
           "stops": 0,
-          "duration": 329
+          "duration": 327
         },
         "ret": {
           "segs": [
             {
-              "f": "JFK",
-              "ft": "2026-11-29 21:20",
+              "f": "EWR",
+              "ft": "2026-11-29 16:21",
+              "t": "MCO",
+              "tt": "2026-11-29 19:18",
+              "al": "United",
+              "fn": "UA 1213"
+            },
+            {
+              "f": "MCO",
+              "ft": "2026-11-29 20:00",
               "t": "SFO",
-              "tt": "2026-11-30 01:07",
-              "al": "American",
-              "fn": "AA 177"
+              "tt": "2026-11-29 23:08",
+              "al": "United",
+              "fn": "UA 1852"
             }
           ],
-          "layovers": [],
-          "stops": 0,
-          "duration": 407
+          "layovers": [
+            {
+              "id": "MCO",
+              "dur": 42
+            }
+          ],
+          "stops": 1,
+          "duration": 587
         },
         "link": "https://www.google.com/travel/flights?q=flights%20from%20SFO%20to%20New%20York%20on%202026-11-27%20returning%202026-11-29"
       },
@@ -4257,8 +4291,8 @@
         }
       ],
       "confirmed": {
-        "price": 533.0,
-        "checked": "2026-10-05T01:51:20",
+        "price": 387.0,
+        "checked": "2026-10-13T01:15:10",
         "out": {
           "segs": [
             {
@@ -4278,20 +4312,33 @@
           "segs": [
             {
               "f": "JFK",
-              "ft": "2026-12-06 18:35",
-              "t": "SFO",
-              "tt": "2026-12-06 22:21",
+              "ft": "2026-12-06 15:45",
+              "t": "BOS",
+              "tt": "2026-12-06 17:03",
               "al": "JetBlue",
-              "fn": "B6 1115"
+              "fn": "B6 618"
+            },
+            {
+              "f": "BOS",
+              "ft": "2026-12-06 19:40",
+              "t": "SFO",
+              "tt": "2026-12-06 23:26",
+              "al": "JetBlue",
+              "fn": "B6 733"
             }
           ],
-          "layovers": [],
-          "stops": 0,
-          "duration": 406
+          "layovers": [
+            {
+              "id": "BOS",
+              "dur": 157
+            }
+          ],
+          "stops": 1,
+          "duration": 641
         },
         "link": "https://www.google.com/travel/flights?q=flights%20from%20SFO%20to%20New%20York%20on%202026-12-04%20returning%202026-12-06"
       },
-      "confirmed_low": 429.0
+      "confirmed_low": 387.0
     },
     "2026-12-11": {
       "friday": "2026-12-11",
@@ -9290,6 +9337,10 @@
         {
           "t": "2026-10-12T18:56:17",
           "radar": 478.0
+        },
+        {
+          "t": "2026-10-13T01:14:23",
+          "radar": 478.0
         }
       ],
       "confirmed": {
@@ -9660,6 +9711,10 @@
         {
           "t": "2026-10-12T18:56:17",
           "radar": 348.0
+        },
+        {
+          "t": "2026-10-13T01:14:23",
+          "radar": 415.0
         }
       ],
       "confirmed": {
@@ -11460,7 +11515,7 @@
     }
   },
   "_meta": {
-    "date": "2026-10-12",
-    "events": 5
+    "date": "2026-10-13",
+    "events": 3
   }
 }
