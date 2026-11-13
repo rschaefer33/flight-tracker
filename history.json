@@ -5251,6 +5251,10 @@
         {
           "t": "2026-11-12T18:04:51",
           "radar": 592.0
+        },
+        {
+          "t": "2026-11-13T00:03:53",
+          "radar": 592.0
         }
       ],
       "confirmed": {
@@ -8050,6 +8054,14 @@
     "2027-11-05": {
       "friday": "2027-11-05",
       "sunday": "2027-11-07",
+      "radar_low": null,
+      "samples": [],
+      "confirmed": null,
+      "confirmed_low": null
+    },
+    "2027-11-12": {
+      "friday": "2027-11-12",
+      "sunday": "2027-11-14",
       "radar_low": null,
       "samples": [],
       "confirmed": null,
@@ -14088,6 +14100,10 @@
         {
           "t": "2026-11-12T18:04:51",
           "radar": 269.0
+        },
+        {
+          "t": "2026-11-13T00:03:53",
+          "radar": 267.0
         }
       ],
       "confirmed": {
@@ -14346,6 +14362,10 @@
         },
         {
           "t": "2026-11-12T18:04:51",
+          "radar": 345.0
+        },
+        {
+          "t": "2026-11-13T00:03:53",
           "radar": 345.0
         }
       ],
@@ -15185,8 +15205,8 @@
         }
       ],
       "confirmed": {
-        "price": 736.0,
-        "checked": "2026-11-06T09:12:05",
+        "price": 705.0,
+        "checked": "2026-11-13T00:04:15",
         "out": {
           "segs": [
             {
@@ -15512,8 +15532,8 @@
         }
       ],
       "confirmed": {
-        "price": 891.0,
-        "checked": "2026-11-06T09:12:12",
+        "price": 927.0,
+        "checked": "2026-11-13T00:04:23",
         "out": {
           "segs": [
             {
@@ -15533,16 +15553,16 @@
           "segs": [
             {
               "f": "SFO",
-              "ft": "2027-01-03 16:35",
+              "ft": "2027-01-03 15:00",
               "t": "EWR",
-              "tt": "2027-01-04 00:59",
+              "tt": "2027-01-03 23:30",
               "al": "United",
-              "fn": "UA 1149"
+              "fn": "UA 1284"
             }
           ],
           "layovers": [],
           "stops": 0,
-          "duration": 324
+          "duration": 330
         },
         "link": "https://www.google.com/travel/flights?q=flights%20from%20New%20York%20to%20SFO%20on%202027-01-01%20returning%202027-01-03"
       },
@@ -15554,8 +15574,8 @@
       "radar_low": null,
       "samples": [],
       "confirmed": {
-        "price": 404.0,
-        "checked": "2026-11-07T02:41:04",
+        "price": 377.0,
+        "checked": "2026-11-13T00:04:31",
         "out": {
           "segs": [
             {
@@ -15575,16 +15595,16 @@
           "segs": [
             {
               "f": "SFO",
-              "ft": "2027-01-10 15:25",
+              "ft": "2027-01-10 16:50",
               "t": "EWR",
-              "tt": "2027-01-10 23:58",
+              "tt": "2027-01-11 01:20",
               "al": "United",
-              "fn": "UA 2225"
+              "fn": "UA 1149"
             }
           ],
           "layovers": [],
           "stops": 0,
-          "duration": 333
+          "duration": 330
         },
         "link": "https://www.google.com/travel/flights?q=flights%20from%20New%20York%20to%20SFO%20on%202027-01-08%20returning%202027-01-10"
       },
@@ -16171,10 +16191,18 @@
       "samples": [],
       "confirmed": null,
       "confirmed_low": null
+    },
+    "2027-11-12": {
+      "friday": "2027-11-12",
+      "sunday": "2027-11-14",
+      "radar_low": null,
+      "samples": [],
+      "confirmed": null,
+      "confirmed_low": null
     }
   },
   "_meta": {
-    "date": "2026-11-12",
-    "events": 5
+    "date": "2026-11-13",
+    "events": 3
   }
 }
