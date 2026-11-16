@@ -5414,6 +5414,10 @@
         {
           "t": "2026-11-16T01:46:34",
           "radar": 698.0
+        },
+        {
+          "t": "2026-11-16T09:22:29",
+          "radar": 698.0
         }
       ],
       "confirmed": {
@@ -5713,6 +5717,10 @@
         {
           "t": "2026-11-16T01:46:34",
           "radar": 327.0
+        },
+        {
+          "t": "2026-11-16T09:22:29",
+          "radar": 346.0
         }
       ],
       "confirmed": {
@@ -7578,37 +7586,50 @@
       "radar_low": null,
       "samples": [],
       "confirmed": {
-        "price": 507.0,
-        "checked": "2026-11-10T08:13:06",
+        "price": 341.0,
+        "checked": "2026-11-16T09:22:55",
         "out": {
           "segs": [
             {
               "f": "SFO",
               "ft": "2027-01-22 21:40",
-              "t": "EWR",
-              "tt": "2027-01-23 06:05",
-              "al": "United",
-              "fn": "UA 2482"
+              "t": "JFK",
+              "tt": "2027-01-23 06:12",
+              "al": "JetBlue",
+              "fn": "B6 1016"
             }
           ],
           "layovers": [],
           "stops": 0,
-          "duration": 325
+          "duration": 332
         },
         "ret": {
           "segs": [
             {
-              "f": "EWR",
-              "ft": "2027-01-24 15:00",
+              "f": "JFK",
+              "ft": "2027-01-24 15:45",
+              "t": "BOS",
+              "tt": "2027-01-24 17:04",
+              "al": "JetBlue",
+              "fn": "B6 618"
+            },
+            {
+              "f": "BOS",
+              "ft": "2027-01-24 18:30",
               "t": "SFO",
-              "tt": "2027-01-24 18:19",
-              "al": "United",
-              "fn": "UA 794"
+              "tt": "2027-01-24 22:24",
+              "al": "JetBlue",
+              "fn": "B6 1833"
             }
           ],
-          "layovers": [],
-          "stops": 0,
-          "duration": 379
+          "layovers": [
+            {
+              "id": "BOS",
+              "dur": 86
+            }
+          ],
+          "stops": 1,
+          "duration": 579
         },
         "link": "https://www.google.com/travel/flights?q=flights%20from%20SFO%20to%20New%20York%20on%202027-01-22%20returning%202027-01-24"
       },
@@ -7620,37 +7641,37 @@
       "radar_low": null,
       "samples": [],
       "confirmed": {
-        "price": 417.0,
-        "checked": "2026-11-10T08:13:11",
+        "price": 526.0,
+        "checked": "2026-11-16T09:23:03",
         "out": {
           "segs": [
             {
               "f": "SFO",
               "ft": "2027-01-29 21:40",
-              "t": "EWR",
-              "tt": "2027-01-30 06:05",
-              "al": "United",
-              "fn": "UA 2482"
+              "t": "JFK",
+              "tt": "2027-01-30 06:12",
+              "al": "JetBlue",
+              "fn": "B6 1016"
             }
           ],
           "layovers": [],
           "stops": 0,
-          "duration": 325
+          "duration": 332
         },
         "ret": {
           "segs": [
             {
-              "f": "EWR",
-              "ft": "2027-01-31 20:15",
+              "f": "JFK",
+              "ft": "2027-01-31 16:43",
               "t": "SFO",
-              "tt": "2027-01-31 23:59",
-              "al": "United",
-              "fn": "UA 1800"
+              "tt": "2027-01-31 20:30",
+              "al": "JetBlue",
+              "fn": "B6 615"
             }
           ],
           "layovers": [],
           "stops": 0,
-          "duration": 404
+          "duration": 407
         },
         "link": "https://www.google.com/travel/flights?q=flights%20from%20SFO%20to%20New%20York%20on%202027-01-29%20returning%202027-01-31"
       },
@@ -14231,6 +14252,10 @@
         {
           "t": "2026-11-16T01:46:34",
           "radar": 325.0
+        },
+        {
+          "t": "2026-11-16T09:22:29",
+          "radar": 325.0
         }
       ],
       "confirmed": {
@@ -14541,6 +14566,10 @@
         },
         {
           "t": "2026-11-16T01:46:34",
+          "radar": 338.0
+        },
+        {
+          "t": "2026-11-16T09:22:29",
           "radar": 338.0
         }
       ],
@@ -16378,6 +16407,6 @@
   },
   "_meta": {
     "date": "2026-11-16",
-    "events": 3
+    "events": 5
   }
 }
