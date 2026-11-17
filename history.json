@@ -5422,6 +5422,10 @@
         {
           "t": "2026-11-16T20:14:01",
           "radar": 698.0
+        },
+        {
+          "t": "2026-11-17T03:38:16",
+          "radar": 698.0
         }
       ],
       "confirmed": {
@@ -5728,6 +5732,10 @@
         },
         {
           "t": "2026-11-16T20:14:01",
+          "radar": 346.0
+        },
+        {
+          "t": "2026-11-17T03:38:16",
           "radar": 346.0
         }
       ],
@@ -7691,63 +7699,37 @@
       "radar_low": null,
       "samples": [],
       "confirmed": {
-        "price": 337.0,
-        "checked": "2026-11-11T02:40:26",
+        "price": 341.0,
+        "checked": "2026-11-17T03:38:45",
         "out": {
           "segs": [
             {
               "f": "SFO",
-              "ft": "2027-02-05 21:00",
-              "t": "FLL",
-              "tt": "2027-02-06 05:17",
+              "ft": "2027-02-05 21:40",
+              "t": "JFK",
+              "tt": "2027-02-06 06:12",
               "al": "JetBlue",
-              "fn": "B6 378"
-            },
-            {
-              "f": "FLL",
-              "ft": "2027-02-06 06:10",
-              "t": "LGA",
-              "tt": "2027-02-06 09:00",
-              "al": "JetBlue",
-              "fn": "B6 472"
+              "fn": "B6 1016"
             }
           ],
-          "layovers": [
-            {
-              "id": "FLL",
-              "dur": 53
-            }
-          ],
-          "stops": 1,
-          "duration": 540
+          "layovers": [],
+          "stops": 0,
+          "duration": 332
         },
         "ret": {
           "segs": [
             {
-              "f": "LGA",
-              "ft": "2027-02-07 13:29",
-              "t": "FLL",
-              "tt": "2027-02-07 16:45",
-              "al": "JetBlue",
-              "fn": "B6 71"
-            },
-            {
-              "f": "FLL",
-              "ft": "2027-02-07 20:26",
+              "f": "JFK",
+              "ft": "2027-02-07 16:43",
               "t": "SFO",
-              "tt": "2027-02-07 23:57",
+              "tt": "2027-02-07 20:30",
               "al": "JetBlue",
-              "fn": "B6 277"
+              "fn": "B6 615"
             }
           ],
-          "layovers": [
-            {
-              "id": "FLL",
-              "dur": 221
-            }
-          ],
-          "stops": 1,
-          "duration": 808
+          "layovers": [],
+          "stops": 0,
+          "duration": 407
         },
         "link": "https://www.google.com/travel/flights?q=flights%20from%20SFO%20to%20New%20York%20on%202027-02-05%20returning%202027-02-07"
       },
@@ -7759,22 +7741,35 @@
       "radar_low": null,
       "samples": [],
       "confirmed": {
-        "price": 463.0,
-        "checked": "2026-11-11T02:40:39",
+        "price": 386.0,
+        "checked": "2026-11-17T03:38:51",
         "out": {
           "segs": [
             {
               "f": "SFO",
-              "ft": "2027-02-12 23:21",
+              "ft": "2027-02-12 23:25",
+              "t": "ORD",
+              "tt": "2027-02-13 05:41",
+              "al": "American",
+              "fn": "AA 866"
+            },
+            {
+              "f": "ORD",
+              "ft": "2027-02-13 06:23",
               "t": "JFK",
-              "tt": "2027-02-13 07:59",
-              "al": "Alaska",
-              "fn": "AS 29"
+              "tt": "2027-02-13 09:47",
+              "al": "American",
+              "fn": "AA 2180"
             }
           ],
-          "layovers": [],
-          "stops": 0,
-          "duration": 338
+          "layovers": [
+            {
+              "id": "ORD",
+              "dur": 42
+            }
+          ],
+          "stops": 1,
+          "duration": 442
         },
         "ret": {
           "segs": [
@@ -7793,7 +7788,7 @@
         },
         "link": "https://www.google.com/travel/flights?q=flights%20from%20SFO%20to%20New%20York%20on%202027-02-12%20returning%202027-02-14"
       },
-      "confirmed_low": 427.0
+      "confirmed_low": 386.0
     },
     "2027-02-19": {
       "friday": "2027-02-19",
@@ -7801,37 +7796,63 @@
       "radar_low": null,
       "samples": [],
       "confirmed": {
-        "price": 387.0,
-        "checked": "2026-11-11T02:40:42",
+        "price": 386.0,
+        "checked": "2026-11-17T03:38:59",
         "out": {
           "segs": [
             {
               "f": "SFO",
-              "ft": "2027-02-19 23:21",
-              "t": "JFK",
-              "tt": "2027-02-20 07:59",
-              "al": "Alaska",
-              "fn": "AS 29"
+              "ft": "2027-02-19 22:55",
+              "t": "IAD",
+              "tt": "2027-02-20 07:05",
+              "al": "United",
+              "fn": "UA 2837"
+            },
+            {
+              "f": "IAD",
+              "ft": "2027-02-20 08:20",
+              "t": "LGA",
+              "tt": "2027-02-20 09:45",
+              "al": "United",
+              "fn": "UA 4032"
             }
           ],
-          "layovers": [],
-          "stops": 0,
-          "duration": 338
+          "layovers": [
+            {
+              "id": "IAD",
+              "dur": 75
+            }
+          ],
+          "stops": 1,
+          "duration": 470
         },
         "ret": {
           "segs": [
             {
-              "f": "JFK",
-              "ft": "2027-02-21 17:29",
+              "f": "LGA",
+              "ft": "2027-02-21 15:43",
+              "t": "IAH",
+              "tt": "2027-02-21 18:53",
+              "al": "United",
+              "fn": "UA 1037"
+            },
+            {
+              "f": "IAH",
+              "ft": "2027-02-21 22:10",
               "t": "SFO",
-              "tt": "2027-02-21 21:19",
-              "al": "Alaska",
-              "fn": "AS 581"
+              "tt": "2027-02-22 00:41",
+              "al": "United",
+              "fn": "UA 1609"
             }
           ],
-          "layovers": [],
-          "stops": 0,
-          "duration": 410
+          "layovers": [
+            {
+              "id": "IAH",
+              "dur": 197
+            }
+          ],
+          "stops": 1,
+          "duration": 718
         },
         "link": "https://www.google.com/travel/flights?q=flights%20from%20SFO%20to%20New%20York%20on%202027-02-19%20returning%202027-02-21"
       },
@@ -14268,6 +14289,10 @@
         {
           "t": "2026-11-16T20:14:01",
           "radar": 325.0
+        },
+        {
+          "t": "2026-11-17T03:38:16",
+          "radar": 325.0
         }
       ],
       "confirmed": {
@@ -16418,7 +16443,7 @@
     }
   },
   "_meta": {
-    "date": "2026-11-16",
-    "events": 5
+    "date": "2026-11-17",
+    "events": 3
   }
 }
