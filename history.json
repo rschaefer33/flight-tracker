@@ -5426,6 +5426,10 @@
         {
           "t": "2026-11-17T03:38:16",
           "radar": 698.0
+        },
+        {
+          "t": "2026-11-17T13:00:30",
+          "radar": 698.0
         }
       ],
       "confirmed": {
@@ -5736,6 +5740,10 @@
         },
         {
           "t": "2026-11-17T03:38:16",
+          "radar": 346.0
+        },
+        {
+          "t": "2026-11-17T13:00:30",
           "radar": 346.0
         }
       ],
@@ -7864,8 +7872,8 @@
       "radar_low": null,
       "samples": [],
       "confirmed": {
-        "price": 387.0,
-        "checked": "2026-11-11T10:38:55",
+        "price": 376.0,
+        "checked": "2026-11-17T13:00:49",
         "out": {
           "segs": [
             {
@@ -7898,7 +7906,7 @@
         },
         "link": "https://www.google.com/travel/flights?q=flights%20from%20SFO%20to%20New%20York%20on%202027-02-26%20returning%202027-02-28"
       },
-      "confirmed_low": 377.0
+      "confirmed_low": 376.0
     },
     "2027-03-05": {
       "friday": "2027-03-05",
@@ -13742,37 +13750,37 @@
         }
       ],
       "confirmed": {
-        "price": 709.0,
-        "checked": "2026-11-11T10:38:59",
+        "price": 724.0,
+        "checked": "2026-11-17T13:00:54",
         "out": {
           "segs": [
             {
               "f": "JFK",
-              "ft": "2026-11-20 21:35",
+              "ft": "2026-11-20 20:18",
               "t": "SFO",
-              "tt": "2026-11-21 01:12",
-              "al": "Delta",
-              "fn": "DL 1732"
+              "tt": "2026-11-20 23:59",
+              "al": "Alaska",
+              "fn": "AS 39"
             }
           ],
           "layovers": [],
           "stops": 0,
-          "duration": 397
+          "duration": 401
         },
         "ret": {
           "segs": [
             {
               "f": "SFO",
-              "ft": "2026-11-22 16:00",
+              "ft": "2026-11-22 13:51",
               "t": "JFK",
-              "tt": "2026-11-23 00:28",
-              "al": "Delta",
-              "fn": "DL 363"
+              "tt": "2026-11-22 22:29",
+              "al": "Alaska",
+              "fn": "AS 32"
             }
           ],
           "layovers": [],
           "stops": 0,
-          "duration": 328
+          "duration": 338
         },
         "link": "https://www.google.com/travel/flights?q=flights%20from%20New%20York%20to%20SFO%20on%202026-11-20%20returning%202026-11-22"
       },
@@ -14292,6 +14300,10 @@
         },
         {
           "t": "2026-11-17T03:38:16",
+          "radar": 325.0
+        },
+        {
+          "t": "2026-11-17T13:00:30",
           "radar": 325.0
         }
       ],
@@ -16444,6 +16456,6 @@
   },
   "_meta": {
     "date": "2026-11-17",
-    "events": 3
+    "events": 5
   }
 }
